@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prafull Kumar Prajapati - Portfolio</title>
+  <style>
+    body {
+        background-color: #f0f5ff;  /* Light blue background */
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        color: #2c3e50;
+    }
+
+    h2 {
+        font-size: 2em;
+        color: #34495e;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        color: #455a64;
+    }
+
+    p {
+        font-size: 1.1em;
+        line-height: 1.6;
+    }
+
+    nav ul li {
+        font-size: 1.2em;
+    }
+
+    figcaption {
+        font-size: 1.1em;
+        color: #455a64;
+    }
+
+    .quick-links {
+        font-size: 1.1em;
+    }
+
+    footer {
+        font-size: 0.9em;
+        color: #666;
+    }
+
+    form label {
+        font-size: 1.1em;
+    }
+
+    form input, form textarea {
+        font-size: 1em;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 1.1em;
+    }
+</style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION (Requirement: header with title, nav with links) -->
+  <header>
+    <h1>Prafull Kumar Prajapati - Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- ABOUT SECTION (Requirement: section + figure + figcaption) -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a Master's student in Computer Science at the University of Texas at Dallas (GPA 4.0). 
+        I have 3+ years of backend development experience, previously worked at Amazon Web Services and led teams at LivSYT. 
+        My expertise spans distributed systems, microservices, and cloud platforms like AWS & Azure.
+      </p>
+      <figure>
+        <img src="https://via.placeholder.com/150" alt="Profile placeholder image">
+        <figcaption>Prafull Kumar Prajapati</figcaption>
+      </figure>
+    </section>
+
+    <!-- PROJECTS SECTION (Requirement: at least 2 articles, each with heading, paragraph, link, and ul list of features) -->
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <article>
+        <h3>NLP-based Video Recommendation Software</h3>
+        <p>
+          Developed a model using Naive Bayes classifiers to categorize video content and recommend educational videos.
+        </p>
+        <a href="#">Learn More</a>
+        <ul>
+          <li>Implemented text extraction using PyTesseract</li>
+          <li>Applied Natural Language Processing for keyword filtering</li>
+          <li>Built recommendation pipeline for classification</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Strategies to Optimize Project Management</h3>
+        <p>
+          Evaluated metaheuristic algorithms to maximize project profit (NPV) while considering activity precedence and resource limits.
+        </p>
+        <a href="#">Learn More</a>
+        <ul>
+          <li>Designed activity pattern optimizer</li>
+          <li>Implemented algorithm comparisons</li>
+          <li>Tested scalability with real project datasets</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- CONTACT SECTION (Requirement: form with labels, inputs, textarea, submit) -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- ASIDE (Requirement: meaningful content in aside) -->
+  <aside>
+    <h2>Quick Links</h2>
+    <ul>
+      <li><a href="mailto:prafull.prajapati@utdallas.edu">Email Me</a></li>
+      <li><a href="http://www.linkedin.com/in/prafull-prajapati" target="_blank">LinkedIn</a></li>
+      <li><a href="https://github.com/Prafull1Kumar" target="_blank">GitHub</a></li>
+      <li><a href="https://leetcode.com/Prafull1kumar/" target="_blank">LeetCode</a></li>
+    </ul>
+  </aside>
+
+  <!-- FOOTER (Requirement: copyright + social/external link) -->
+  <footer>
+    <p>&copy; 2025 Prafull Kumar Prajapati. All rights reserved.</p>
+    <p>Connect on <a href="http://www.linkedin.com/in/prafull-prajapati" target="_blank">LinkedIn</a></p>
+  </footer>
+</body>
+</html>
