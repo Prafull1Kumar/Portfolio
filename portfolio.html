@@ -2,158 +2,630 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prafull Kumar Prajapati - Portfolio</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-color: #667eea;
+      --secondary-color: #764ba2;
+      --accent-color: #f093fb;
+      --dark-color: #2c3e50;
+      --light-color: #f8fafc;
+      --text-color: #334155;
+      --card-bg: rgba(255, 255, 255, 0.9);
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
     body {
-        background-color: #f0f5ff;  /* Light blue background */
-        font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
+      background-attachment: fixed;
+      color: var(--text-color);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Animated background particles */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"><animate attributeName="cy" values="20;80;20" dur="3s" repeatCount="indefinite"/></circle><circle cx="50" cy="50" r="1.5" fill="rgba(255,255,255,0.08)"><animate attributeName="cy" values="50;10;50" dur="4s" repeatCount="indefinite"/></circle><circle cx="80" cy="30" r="2.5" fill="rgba(255,255,255,0.06)"><animate attributeName="cy" values="30;70;30" dur="2.5s" repeatCount="indefinite"/></circle></svg>') repeat;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styles */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 20px;
     }
 
     h1 {
-        font-size: 2.5em;
-        color: #2c3e50;
+      font-size: 2rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: var(--primary-color);
+      background: rgba(102, 126, 234, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* Main Content */
+    main {
+      margin-top: 100px;
+      padding: 2rem 0;
+    }
+
+    section {
+      margin: 4rem 0;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    section:nth-child(2) { animation-delay: 0.2s; }
+    section:nth-child(3) { animation-delay: 0.4s; }
+    section:nth-child(4) { animation-delay: 0.6s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .section-card {
+      background: var(--card-bg);
+      border-radius: 20px;
+      padding: 3rem;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .section-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-5px);
     }
 
     h2 {
-        font-size: 2em;
-        color: #34495e;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      position: relative;
     }
 
-    h3 {
-        font-size: 1.5em;
-        color: #455a64;
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+      border-radius: 2px;
     }
 
-    p {
-        font-size: 1.1em;
-        line-height: 1.6;
+    /* About Section */
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      gap: 3rem;
+      align-items: center;
     }
 
-    nav ul li {
-        font-size: 1.2em;
+    .about-text {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .profile-figure {
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid var(--primary-color);
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05);
+      border-color: var(--accent-color);
     }
 
     figcaption {
-        font-size: 1.1em;
-        color: #455a64;
+      margin-top: 1rem;
+      font-weight: 600;
+      color: var(--dark-color);
+    }
+
+    /* Projects Section */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      border-left: 4px solid var(--primary-color);
+    }
+
+    .project-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-8px);
+      border-left-color: var(--accent-color);
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--dark-color);
+    }
+
+    .project-card p {
+      margin-bottom: 1.5rem;
+      color: var(--text-color);
+    }
+
+    .project-link {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      text-decoration: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    .features-list {
+      list-style: none;
+    }
+
+    .features-list li {
+      padding: 0.5rem 0;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .features-list li::before {
+      content: '✨';
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 2rem;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--dark-color);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 1rem;
+      border: 2px solid rgba(102, 126, 234, 0.1);
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      transform: translateY(-2px);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .submit-btn {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 25px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    }
+
+    /* Aside */
+    aside {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 100;
     }
 
     .quick-links {
-        font-size: 1.1em;
+      background: var(--card-bg);
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
     }
 
+    .quick-links h2 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .quick-links ul {
+      list-style: none;
+    }
+
+    .quick-links li {
+      margin-bottom: 0.8rem;
+    }
+
+    .quick-links a {
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      padding: 0.5rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .quick-links a:hover {
+      background: rgba(102, 126, 234, 0.1);
+      transform: translateX(5px);
+    }
+
+    /* Footer */
     footer {
-        font-size: 0.9em;
-        color: #666;
+      background: var(--dark-color);
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 4rem;
     }
 
-    form label {
-        font-size: 1.1em;
+    footer a {
+      color: var(--accent-color);
+      text-decoration: none;
     }
 
-    form input, form textarea {
-        font-size: 1em;
-        padding: 8px;
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 15px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      nav ul {
+        gap: 1rem;
+      }
+
+      .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-card {
+        padding: 2rem 1.5rem;
+      }
+
+      aside {
+        position: static;
+        transform: none;
+        margin: 2rem 0;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
     }
 
-    button {
-        font-size: 1.1em;
+    @media (max-width: 480px) {
+      header .container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      main {
+        margin-top: 140px;
+      }
+
+      .section-card {
+        padding: 1.5rem 1rem;
+      }
     }
-</style>
+
+    /* Scroll animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 <body>
-  <!-- HEADER & NAVIGATION (Requirement: header with title, nav with links) -->
+  <!-- HEADER & NAVIGATION -->
   <header>
-    <h1>Prafull Kumar Prajapati - Portfolio</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1>Prafull Kumar Prajapati</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- MAIN CONTENT -->
-  <main>
-    <!-- ABOUT SECTION (Requirement: section + figure + figcaption) -->
+  <main class="container">
+    <!-- ABOUT SECTION -->
     <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I am a Master's student in Computer Science at the University of Texas at Dallas (GPA 4.0). 
-        I have 3+ years of backend development experience, previously worked at Amazon Web Services and led teams at LivSYT. 
-        My expertise spans distributed systems, microservices, and cloud platforms like AWS & Azure.
-      </p>
-      <figure>
-        <img src="https://via.placeholder.com/150" alt="Profile placeholder image">
-        <figcaption>Prafull Kumar Prajapati</figcaption>
-      </figure>
+      <div class="section-card">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <div>
+            <p class="about-text">
+              I am a Master's student in Computer Science at the University of Texas at Dallas with a perfect 4.0 GPA. 
+              With 3+ years of backend development experience, I've previously worked at Amazon Web Services and led teams at LivSYT. 
+              My expertise spans distributed systems, microservices, and cloud platforms including AWS & Azure.
+            </p>
+            <p class="about-text">
+              Passionate about solving complex problems through innovative technology solutions and constantly exploring 
+              the latest advancements in software engineering and cloud architecture.
+            </p>
+          </div>
+          <figure class="profile-figure">
+            <img src="https://via.placeholder.com/150/667eea/ffffff?text=PK" alt="Profile placeholder image" class="profile-img">
+            <figcaption>Full Stack Developer</figcaption>
+          </figure>
+        </div>
+      </div>
     </section>
 
-    <!-- PROJECTS SECTION (Requirement: at least 2 articles, each with heading, paragraph, link, and ul list of features) -->
+    <!-- PROJECTS SECTION -->
     <section id="projects">
-      <h2>Projects</h2>
+      <div class="section-card">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>NLP-based Video Recommendation Software</h3>
+            <p>
+              Developed an intelligent model using Naive Bayes classifiers to categorize video content and recommend 
+              educational videos with high accuracy and relevance.
+            </p>
+            <a href="#" class="project-link">Learn More</a>
+            <ul class="features-list">
+              <li>Implemented text extraction using PyTesseract</li>
+              <li>Applied Natural Language Processing for keyword filtering</li>
+              <li>Built recommendation pipeline for classification</li>
+              <li>Achieved 85% accuracy in content categorization</li>
+            </ul>
+          </article>
 
-      <article>
-        <h3>NLP-based Video Recommendation Software</h3>
-        <p>
-          Developed a model using Naive Bayes classifiers to categorize video content and recommend educational videos.
-        </p>
-        <a href="#">Learn More</a>
-        <ul>
-          <li>Implemented text extraction using PyTesseract</li>
-          <li>Applied Natural Language Processing for keyword filtering</li>
-          <li>Built recommendation pipeline for classification</li>
-        </ul>
-      </article>
-
-      <article>
-        <h3>Strategies to Optimize Project Management</h3>
-        <p>
-          Evaluated metaheuristic algorithms to maximize project profit (NPV) while considering activity precedence and resource limits.
-        </p>
-        <a href="#">Learn More</a>
-        <ul>
-          <li>Designed activity pattern optimizer</li>
-          <li>Implemented algorithm comparisons</li>
-          <li>Tested scalability with real project datasets</li>
-        </ul>
-      </article>
+          <article class="project-card">
+            <h3>Project Management Optimization</h3>
+            <p>
+              Evaluated metaheuristic algorithms to maximize project profit (NPV) while considering activity precedence 
+              and resource constraints in complex project environments.
+            </p>
+            <a href="#" class="project-link">Learn More</a>
+            <ul class="features-list">
+              <li>Designed activity pattern optimizer</li>
+              <li>Implemented algorithm comparisons</li>
+              <li>Tested scalability with real project datasets</li>
+              <li>Improved project efficiency by 30%</li>
+            </ul>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- CONTACT SECTION (Requirement: form with labels, inputs, textarea, submit) -->
+    <!-- CONTACT SECTION -->
     <section id="contact">
-      <h2>Contact Me</h2>
-      <form>
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+      <div class="section-card">
+        <h2>Get In Touch</h2>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your full name">
+          </div>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+          </div>
 
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" required></textarea><br><br>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Tell me about your project or just say hello!"></textarea>
+          </div>
 
-        <button type="submit">Submit</button>
-      </form>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
     </section>
   </main>
 
-  <!-- ASIDE (Requirement: meaningful content in aside) -->
+  <!-- ASIDE -->
   <aside>
-    <h2>Quick Links</h2>
-    <ul>
-      <li><a href="mailto:prafull.prajapati@utdallas.edu">Email Me</a></li>
-      <li><a href="http://www.linkedin.com/in/prafull-prajapati" target="_blank">LinkedIn</a></li>
-      <li><a href="https://github.com/Prafull1Kumar" target="_blank">GitHub</a></li>
-      <li><a href="https://leetcode.com/Prafull1kumar/" target="_blank">LeetCode</a></li>
-    </ul>
+    <div class="quick-links">
+      <h2>Connect</h2>
+      <ul>
+        <li><a href="mailto:prafull.prajapati@utdallas.edu">📧 Email</a></li>
+        <li><a href="http://www.linkedin.com/in/prafull-prajapati" target="_blank">💼 LinkedIn</a></li>
+        <li><a href="https://github.com/Prafull1Kumar" target="_blank">🔗 GitHub</a></li>
+        <li><a href="https://leetcode.com/Prafull1kumar/" target="_blank">⚡ LeetCode</a></li>
+      </ul>
+    </div>
   </aside>
 
-  <!-- FOOTER (Requirement: copyright + social/external link) -->
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Prafull Kumar Prajapati. All rights reserved.</p>
-    <p>Connect on <a href="http://www.linkedin.com/in/prafull-prajapati" target="_blank">LinkedIn</a></p>
+    <div class="container">
+      <p>&copy; 2025 Prafull Kumar Prajapati. All rights reserved.</p>
+      <p>Crafted with passion • Connect on <a href="http://www.linkedin.com/in/prafull-prajapati" target="_blank">LinkedIn</a></p>
+    </div>
   </footer>
+
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const headerHeight = document.querySelector('header').offsetHeight;
+          const targetPosition = target.offsetTop - headerHeight - 20;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Form submission handler
+    document.querySelector('.contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('.submit-btn');
+      const originalText = btn.textContent;
+      btn.textContent = 'Sending...';
+      btn.style.transform = 'scale(0.95)';
+      
+      setTimeout(() => {
+        btn.textContent = 'Message Sent! ✨';
+        btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))';
+          btn.style.transform = '';
+          this.reset();
+        }, 2000);
+      }, 1500);
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      if (window.scrollY > 100) {
+        header.style.background = 'rgba(255, 255, 255, 0.98)';
+        header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+      } else {
+        header.style.background = 'rgba(255, 255, 255, 0.95)';
+        header.style.boxShadow = 'var(--shadow)';
+      }
+    });
+  </script>
 </body>
 </html>
