@@ -1,0 +1,191 @@
+/* =====================================
+   portfolio.css — Problem 3
+   Requirements:
+   - Visually appealing portfolio
+   - Use at least one Flexbox layout and one Grid layout
+   - Clean, readable, commented
+   ===================================== */
+
+/* 1) CSS RESET-LITE & ROOT TOKENS */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Tahoma, sans-serif;
+  color: #1a2a33;
+  background: #f7fbff; /* soft background */
+}
+:root {
+  --maxw: 1100px;
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --radius: 12px;
+  --surface: #ffffff;
+  --muted: #5f6c7b;
+  --primary: #0d6efd;
+  --primary-600: #0b5ed7;
+  --shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+
+/* Accessibility: skip link visible on focus */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: fixed;
+  left: var(--space-4);
+  top: var(--space-4);
+  width: auto;
+  height: auto;
+  padding: var(--space-2) var(--space-3);
+  background: #000;
+  color: #fff;
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+/* 2) HEADER — FLEXBOX LAYOUT */
+.site-header {
+  display: flex;                 /* Flexbox requirement #1 */
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: var(--space-4);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.brand__name { font-weight: 700; font-size: 1.1rem; }
+
+.site-nav .nav__list {
+  display: flex;
+  gap: var(--space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.site-nav a {
+  text-decoration: none;
+  color: #102a43;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+.site-nav a:hover {
+  background: #e9f2ff;
+}
+
+/* Section base */
+.section {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: var(--space-4);
+}
+
+/* 3) ABOUT — FLEXBOX FOR MEDIA + TEXT */
+.about {
+  display: flex;                 /* Flexbox requirement #2 */
+  gap: var(--space-5);
+  align-items: center;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.about__media img {
+  border-radius: 50%;
+  display: block;
+}
+.about__content h2 {
+  margin-top: 0;
+}
+.about__links {
+  list-style: none;
+  display: flex;
+  gap: var(--space-3);
+  padding: 0;
+  margin: var(--space-3) 0 0 0;
+}
+.about__links a { color: var(--primary); text-decoration: none; }
+.about__links a:hover { text-decoration: underline; }
+
+/* 4) PROJECTS — GRID LAYOUT */
+.projects h2 { margin-top: 0; }
+.projects__grid {
+  display: grid;                              /* Grid requirement */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-4);
+}
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.card__title { margin: 0; }
+.card__list { margin: 0; padding-left: 20px; }
+.button {
+  align-self: flex-start;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+.button:hover { background: var(--primary-600); }
+
+/* 5) CONTACT — SIMPLE FORM STYLES */
+.contact .contact__form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--space-4);
+  max-width: 640px;
+}
+.form__row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+input, textarea {
+  font: inherit;
+  padding: 10px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+}
+textarea { resize: vertical; }
+
+/* 6) ASIDE */
+.aside {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* 7) FOOTER */
+.site-footer {
+  text-align: center;
+  padding: var(--space-4);
+  color: var(--muted);
+}
+
+/* 8) RESPONSIVE TWEAKS */
+@media (max-width: 800px) {
+  .about { flex-direction: column; text-align: center; }
+  .about__links { justify-content: center; flex-wrap: wrap; }
+}
