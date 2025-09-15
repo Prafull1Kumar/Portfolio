@@ -1,0 +1,135 @@
+{
+  "landingPage": {
+    "title": "\uD83D\uDC4B Sono Matteo Martinelli",
+    "bio": "Software Engineer con passione e competenze in ambito mobile e web, con un particolare interesse per la sicurezza informatica.\nConsidero la programmazione un’arte: trasformare il mondo reale in soluzioni eleganti ed efficienti.",
+    "visitBtn": "Visita",
+    "or": "oppure",
+    "getCvBtn": "Scarica il CV"
+  },
+  "navbar": {
+    "home": "Home",
+    "experience": "Esperienza",
+    "knowledge": "Competenze",
+    "projects": "Progetti",
+    "contact": "Contatti"
+  },
+  "experience": {
+    "bachelorBegin": {
+      "title": "Laurea in Informatica @Unimi",
+      "description": "Durante il mio periodo all'Università degli Studi di Milano (Unimi), ho seguito il corso di Laurea in Informatica, sviluppando una solida base in aree chiave come algoritmi, strutture dati, programmazione, sistemi operativi e database. Parallelamente agli studi, ho lavorato a tempo pieno, il che ha limitato il tempo che potevo dedicare all’università. Di conseguenza, ho deciso di mettere in pausa gli studi per concentrarmi sulla mia crescita professionale. Questa scelta mi ha permesso di acquisire un'esperienza pratica preziosa nello sviluppo software, fondamentale per affinare le mie competenze tecniche.",
+      "time": "2016-2018"
+    },
+    "androidDsGroup": {
+      "title": "Sviluppatore Android @DSGroup",
+      "description": "In questo periodo ho lavorato a un progetto B2B per Poste Italiane, collaborando con designer, sviluppatori backend e analisti per individuare le soluzioni migliori. Questa esperienza mi ha permesso di confrontarmi sia con approcci legacy che moderni nello sviluppo Android. Sul fronte legacy, ho lavorato con Java, MVC, MVP, SQLite e Room su dispositivi con versioni meno recenti del sistema operativo. Dall’altro lato, ho acquisito esperienza con tecnologie più moderne come Android Jetpack, Kotlin, MVVM, LiveData, Room e Retrofit, lavorando a soluzioni innovative. Inoltre, ero responsabile dell’implementazione di test sia UI che non UI (inclusi test unitari e di integrazione), garantendo qualità e affidabilità delle applicazioni sviluppate.",
+      "time": "2018-2020"
+    },
+    "flutterDsGroup": {
+      "title": "Sviluppatore Android/Flutter e membro Scrum \n@DSGroup",
+      "description": "Durante questo periodo ho lavorato a progetti per Enel, sviluppando applicazioni sia in Android che in Flutter. Questa esperienza mi ha fornito una conoscenza approfondita del sistema operativo Android, poiché ho lavorato anche a un livello più basso, utilizzando content provider e altri componenti di sistema. Come membro di un team Scrum, ero l’unico sviluppatore a coordinarsi direttamente con l’analista per l’implementazione di due progetti principali. Questo ruolo mi ha insegnato a gestire progetti su larga scala in autonomia, richiedendo solide capacità di problem-solving e gestione del progetto. Ho partecipato all’intero ciclo di sviluppo: dalla progettazione e architettura, all’implementazione e ai test, acquisendo un’esperienza preziosa nel lavorare in modo indipendente su progetti complessi.",
+      "time": "2020-2024"
+    },
+    "flutterCert": {
+      "title": "Certificazione ATC Flutter Certified Application Developer",
+      "description": "Ho ottenuto la certificazione ATC Flutter Certified Application Developer, che ha confermato ulteriormente la mia competenza in Flutter e Dart per lo sviluppo di applicazioni mobili.",
+      "time": "2023"
+    },
+    "androidCert": {
+      "title": "Certificazione Google Developers Android",
+      "description": "Ho ottenuto la certificazione Android dei Google Developers, a conferma delle mie competenze nello sviluppo di applicazioni Android e a supporto della mia capacità di creare app scalabili e di alta qualità.",
+      "time": "2023"
+    },
+    "scrumCert": {
+      "title": "PSM1 (Professional Scrum Master I)",
+      "description": "La certificazione Professional Scrum Master I (PSM I) dimostra la mia conoscenza dei principi e delle pratiche Scrum, con un focus sul ruolo dello Scrum Master. Ho acquisito competenze nel facilitare i team, risolvere conflitti e ottimizzare i flussi di lavoro per garantire miglioramento continuo ed efficienza nei processi Agile.",
+      "time": "2023"
+    },
+    "flutterKurt": {
+      "title": "Sviluppatore Flutter e Product Designer \n@Kurt",
+      "description": "Ho collaborato brevemente con una startup incentrata sul connettere persone appassionate di calcio. In quel periodo, ho contribuito allo sviluppo di nuove funzionalità e ho migliorato in modo significativo l’esperienza utente basandomi sul feedback ricevuto. Ancora oggi, il sistema di votazione che ho progettato è utilizzato attivamente.",
+      "time": "2024"
+    },
+    "bachelorContinue": {
+      "title": "Ripresa degli studi universitari",
+      "description": "Ho deciso di lasciare il mio lavoro a tempo pieno per intraprendere una carriera freelance come sviluppatore, in modo da gestire meglio il mio tempo e completare gli studi universitari. Questa scelta è stata guidata dalla mia volontà di apprendere costantemente nuove competenze. Da quando sono tornato all’università, ho approfondito la programmazione funzionale e sviluppato una forte passione per la sicurezza informatica.",
+      "time": "2024 – in corso"
+    }
+  },
+  "skills": {
+    "java":"java:",
+    "kotlin": "kotlin:",
+    "flutter": "flutter:",
+    "javascript": "javascript:",
+    "react": "react:",
+    "nextJs": "next.js:",
+    "tailwind": "tailwind:",
+    "posgresql": "postgresql:",
+    "nodeJs": "node.js:",
+    "firebase": "firebase:",
+    "supabase": "supabase:",
+    "mongodb": "mongodb:",
+    "ffmpeg": "ffmpeg:",
+    "italian": "italiano:",
+    "english": "inglese:",
+    "german": "tedesco:",
+    "mobile": "mobile",
+    "web": "web",
+    "dbBackend": "db & backend",
+    "mediaProc": "media proc.",
+    "language": "lingue"
+  },
+  "projects": {
+    "afse": {
+      "title": "Collezione di Figurine Marvel",
+      "description": "Scopri un'applicazione web realizzata interamente con vanilla JavaScript sviluppata per un esame universitario.\nL'app consente agli utenti di collezionare, acquistare e scambiare figurine Marvel.\nIl frontend è basato su un framework personalizzato che ho creato per offrire un'esperienza fluida in modalità Single Page Application (SPA), garantendo una navigazione senza interruzioni. L'interfaccia intuitiva permette di gestire la propria collezione e partecipare agli scambi con altri utenti."
+    },
+    "portfolio": {
+      "title": "Portfolio personale",
+      "description": "Esplora il mio portfolio sviluppato con Next.js, stilizzato con Tailwind CSS e DaisyUI. Il sito è completamente responsive, multilingua (italiano, inglese e tedesco) e si adatta automaticamente al tema chiaro o scuro in base alle preferenze del sistema dell’utente, così come alla lingua di sistema, offrendo un’esperienza utente su misura.\nHo posto particolare attenzione all’ottimizzazione del rendering sia lato server che lato client, garantendo tempi di caricamento rapidi e prestazioni elevate.\nL’interfaccia è coerente e moderna, pensata per valorizzare al meglio le mie competenze, i progetti e le esperienze professionali.Il sito è ottimizzato per la SEO tecnica e semantica: utilizza tag strutturati, metadati dinamici localizzati (title, description, canonical, hreflang), supporta Twitter Cards e Open Graph per una condivisione social efficace e implementa una sitemap multilingua aggiornata, oltre a robots.txt personalizzato. È conforme agli standard di accessibilità e indicizzazione mobile-first di Google."
+    },
+    "fakeFootball": {
+      "title": "Gestione Squadra e Streaming Partite",
+      "description": "Questa app, sviluppata in Flutter, è nata per soddisfare le mie esigenze personali nella gestione di una squadra di calcio, ed è disponibile sia su mobile che su desktop. Include funzionalità come la gestione della rosa, statistiche individuali e lo streaming delle partite tramite OBS Studio, con grafiche personalizzate generate in tempo reale grazie a FFmpeg. L'app automatizza anche la creazione di contenuti video post-partita in formati verticali e orizzontali, pensati per la pubblicazione su diverse piattaforme social. Inizialmente sviluppata per uso personale, l’obiettivo è ora quello di perfezionarla e commercializzarla come strumento completo non solo per allenatori, giocatori e content creator, ma anche per tutte le altre discipline sportive di squadra."
+    },
+    "trivia": {
+      "title": "Trivia Escape",
+      "description": "Unisciti a un'avventura trivia ambientata nello spazio in stile 2D! Guida la sfera attraverso labirinti intricati rispondendo correttamente alle domande per raggiungere l’uscita. Il gioco offre due modalità: una rilassata, senza limiti di tempo, e una a tempo, per chi cerca una sfida più intensa. L’obiettivo è quello di evolvere il progetto in una versione multiplayer, rendendo l’esperienza ancora più coinvolgente e competitiva."
+    },
+    "public": "pubblico",
+    "private": "privato"
+  },
+  "contact": {
+    "formTitle": "contattami",
+    "nameForm": "Nome",
+    "emailForm": "Email",
+    "messageForm": "Messaggio",
+    "submitBtn": "Invia",
+    "okBtn": "Messaggio inviato",
+    "errorBtn": "Qualcosa è andato storto",
+    "contactTitle": "informazioni di contatto",
+    "location": "Milano, IT",
+    "rights": "© Tvoosai. Tutti i diritti riservati"
+  },
+  "meta": {
+    "home": {
+      "title": "Tvoosai – Sviluppatore Mobile & Web Freelance",
+      "description": "Portfolio di Matteo, sviluppatore mobile e web freelance esperto in Flutter, React e backend moderno."
+    },
+    "experience": {
+      "title": "Esperienza Lavorativa – Flutter, React, Backend | Tvoosai",
+      "description": "Scopri le esperienze lavorative e le certificazioni di Matteo nello sviluppo di app e soluzioni web."
+    },
+    "skills": {
+      "title": "Competenze Tecniche – Stack Tecnologico | Tvoosai",
+      "description": "Stack tecnologico, linguaggi e strumenti utilizzati da Matteo nei suoi progetti."
+    },
+    "projects": {
+      "title": "Progetti – Portfolio Matteo | Tvoosai",
+      "description": "Una selezione di progetti personali e commerciali realizzati da Matteo."
+    },
+    "contact": {
+      "title": "Contattami – Collaborazioni & Freelance | Tvoosai",
+      "description": "Contatta Matteo per proposte di collaborazione, freelance o networking tech."
+    }
+  }
+}

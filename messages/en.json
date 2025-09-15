@@ -1,0 +1,135 @@
+{
+  "landingPage": {
+    "title": "\uD83D\uDC4B I'm Matteo Martinelli",
+    "bio": "I'm a passionate Software Engineer with experience in both mobile and web, with a strong focus on cybersecurity. For me, programming is the art of abstracting the world around us into elegant and efficient solutions.",
+    "visitBtn": "Visit",
+    "or": "or",
+    "getCvBtn": "Get the CV"
+  },
+  "navbar": {
+    "home": "Home",
+    "experience": "Experience",
+    "knowledge": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "experience": {
+    "bachelorBegin": {
+      "title": "Bachelor's Degree in Computer Science @Unimi",
+      "description": "During my time at the University of Milan (Unimi), I pursued a Bachelor\\'s degree in Computer Science, developing a solid foundation in key areas of the field such as algorithms, data structures, programming, operating systems, and databases. Alongside my studies, I worked full-time, which limited the time I could fully dedicate to university. As a result, I decided to pause my studies to focus on my professional growth and career development. This decision allowed me to gain valuable hands-on experience in software development, which has been instrumental in shaping my technical skills.",
+      "time": "2016-2018"
+    },
+    "androidDsGroup": {
+      "title": "Android developer @DSGroup",
+      "description": "During this time, I worked on a B2B project for Poste Italiane, collaborating with designers, backend developers, and analysts to find the best solutions. This experience allowed me to work with both legacy and modern approaches to Android development. On the legacy side, I worked with Java, MVC, MVP, SQLite, and Room on devices running older versions of the operating system. On the other hand, I also gained experience with newer technologies such as Android Jetpack, Kotlin, MVVM, LiveData, Room, and Retrofit, working on more innovative solutions. Additionally, I was responsible for implementing both UI and non-UI tests (including unit tests and integration tests), ensuring the quality and reliability of the applications we developed.",
+      "time": "2018-2020"
+    },
+    "flutterDsGroup": {
+      "title": "Android/Flutter Developer & Scrum Member \n@DSGroup",
+      "description": "During this period, I worked on projects for Enel, developing applications both for Android and using Flutter. This experience gave me a comprehensive understanding of the Android operating system, as I had to work at a lower level, utilizing content providers and other system components. As a member of a Scrum team, I was the only developer coordinating directly with the analyst for the implementation of two major projects. This role taught me how to handle large-scale projects independently, requiring strong problem-solving and project management skills. I was involved in the entire development lifecycle, from design and architecture to implementation and testing, gaining valuable experience in working autonomously on complex projects.",
+      "time": "2020-2024"
+    },
+    "flutterCert": {
+      "title": "ATC Flutter Certified Application Developer",
+      "description": "I obtained the ATC Flutter Certified Application Developer certification, which further validated my expertise in Flutter and Dart for mobile application development.",
+      "time": "2023"
+    },
+    "androidCert": {
+      "title": "Google Developers Android Certification",
+      "description": "I obtained the Google Developers Android Certification, validating my skills in Android application development and reinforcing my expertise in building high-quality, scalable Android apps.",
+      "time": "2023"
+    },
+    "scrumCert": {
+      "title": "PSM1 (Professional Scrum Master I)",
+      "description": "The Professional Scrum Master I (PSM I) certification demonstrates my understanding of Scrum principles and practices, focusing on the Scrum Master role. I gained skills in facilitating teams, resolving conflicts, and optimizing workflows to ensure continuous improvement and efficient Agile processes.",
+      "time": "2023"
+    },
+    "flutterKurt": {
+      "title": "Flutter Developer & Product designer \n@Kurt",
+      "description": "I briefly collaborated with a startup focused on connecting people who enjoy playing soccer. During this time, I contributed to the development of new features and made a significant impact on improving the user experience based on feedback from users. To this day, the voting system I designed is still in use.",
+      "time": "2024"
+    },
+    "bachelorContinue": {
+      "title": "Resuming university",
+      "description": "I decided to leave my full-time job and pursue a freelance career as a developer to better manage my time and complete my university studies. This decision was driven by my desire to continuously learn new skills. Since returning to university, I've enhanced my knowledge in functional programming and developed a strong passion for cybersecurity.",
+      "time": "2024 – Present"
+    }
+  },
+  "skills": {
+    "java":"java:",
+    "kotlin": "kotlin:",
+    "flutter": "flutter:",
+    "javascript": "javascript:",
+    "react": "react:",
+    "nextJs": "next.js:",
+    "tailwind": "tailwind:",
+    "posgresql": "posgtresql:",
+    "nodeJs": "node.js:",
+    "firebase": "firebase:",
+    "supabase": "supabase:",
+    "mongodb": "mongodb:",
+    "ffmpeg": "ffmpeg:",
+    "italian": "italian:",
+    "english": "english:",
+    "german": "german:",
+    "mobile": "mobile",
+    "web": "web",
+    "dbBackend": "db & backend",
+    "mediaProc": "media proc.",
+    "language": "languages"
+  },
+  "projects": {
+    "afse": {
+      "title": "Marvel Stickers Collection",
+      "description": "Discover a web application built entirely with vanilla JavaScript, developed for a university exam. This app allows users to collect, buy, and trade Marvel stickers. The frontend is powered by a custom framework I created to ensure a smooth Single Page Application (SPA) experience, providing seamless navigation. Enjoy an intuitive interface for managing your collection and engaging in trades with others."
+    },
+    "portfolio": {
+      "title":"Personal portfolio",
+      "description":"Explore my portfolio built with Next.js and styled using Tailwind CSS and DaisyUI. The site is fully responsive, multilingual (Italian, English, and German), and automatically adapts to the user’s system preferences for language and color scheme (light or dark mode), providing a personalized and accessible experience.\nI have focused on both server-side and client-side rendering optimizations to ensure fast load times and high performance. The interface is modern and consistent, designed to highlight my skills, projects, and professional experience.\nThe website is optimized for both technical and semantic SEO: it uses structured tags, localized dynamic metadata (title, description, canonical, hreflang), supports Twitter Cards and Open Graph for effective social sharing, and implements a multilingual sitemap and a custom robots.txt file. It follows Google’s mobile-first indexing guidelines and accessibility best practices."
+    },
+    "fakeFootball": {
+      "title": "Team Management & Match Streaming",
+      "description": "This app, developed with Flutter, was initially created to meet my personal needs in managing a football team, and is available on both mobile and desktop. It includes features such as squad management, individual player statistics, and match streaming via OBS Studio, with custom graphics generated in real-time using FFmpeg. The app also automates the creation of post-match video content in both vertical and horizontal formats, optimized for sharing across various social media platforms. While originally built for personal use, the goal is now to refine and commercialize it as a comprehensive tool—not only for coaches, players, and content creators, but also for teams in all kinds of team sports."
+    },
+    "trivia": {
+      "title": "Trivia Escape",
+      "description": "Join a 2D space-themed trivia adventure! Guide the ball through intricate mazes by answering questions correctly to reach the exit. The game features two modes: a relaxed mode without time limits, and a timed mode for those seeking a tougher challenge. The long-term goal is to evolve the project into a multiplayer experience, making it even more engaging and competitive."
+    },
+    "public": "public",
+    "private": "private"
+  },
+  "contact": {
+    "formTitle": "get in touch",
+    "nameForm": "Name",
+    "emailForm": "Email",
+    "messageForm": "Message",
+    "submitBtn": "Submit",
+    "okBtn":"Message sent",
+    "errorBtn": "Something went wrong",
+    "contactTitle": "contact info",
+    "location": "Milan, IT",
+    "rights": "© Tvoosai. All rights reserved"
+  },
+  "meta": {
+    "home": {
+      "title": "Tvoosai – Mobile & Web Developer Freelance",
+      "description": "Portfolio of Matteo, a mobile and web freelance developer skilled in Flutter, React, and modern backend technologies."
+    },
+    "experience": {
+      "title": "Work Experience – Flutter, React, Backend | Tvoosai",
+      "description": "Explore Matteo's work experience and certifications in mobile and web development."
+    },
+    "skills": {
+      "title": "Technical Skills – Tech Stack | Tvoosai",
+      "description": "Programming languages, tools, and technologies Matteo uses in his projects."
+    },
+    "projects": {
+      "title": "Projects – Matteo’s Portfolio | Tvoosai",
+      "description": "A selection of personal and commercial projects developed by Matteo."
+    },
+    "contact": {
+      "title": "Contact Me – Freelance & Collaborations | Tvoosai",
+      "description": "Get in touch with Matteo for collaborations, freelance opportunities, or tech networking."
+    }
+  }
+}

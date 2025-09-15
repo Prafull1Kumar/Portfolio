@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*@plugin "daisyui"{
+    themes: light --default, dark --prefersdark;
+}
+@plugin "daisyui/theme" {
+    name: light;
+    --color-primary: #3b82f6;
+    --color-secondary: #6b7280;
+    --color-accent: #10b981;
+    --color-neutral: #f3f4f6;
+    --color-base-100: #faf9f6;
+    --color-base-200: #e5e7eb;
+    --color-info: #60a5fa;
+    --color-info-accent: #93c5fd;
+    --color-success: #34d399;
+    --color-success-accent: #6ee7b7;
+    --color-warning: #fbbf24;
+    --color-warning-accent: #fde047;
+    --color-error: #ef4444;
+
+}
+
+@plugin "daisyui/theme" {
+    name: dark;
+    --color-primary: #2563eb;
+    --color-secondary: #9ca3af;
+    --color-accent: #14b8a6;
+    --color-neutral: #1f2937;
+    --color-base-100: #111827;
+    --color-base-200: #1a202c;
+    --color-info: #93c5fd;
+    --color-info-accent: #60a5fa;
+    --color-success: #4ade80;
+    --color-success-accent: #22c55e;
+    --color-warning: #fcd34d;
+    --color-warning-accent: #f59e0b;
+    --color-error: #f87171;
+
+}
+*/
+
+html {
+    @apply font-mono;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.landing-section {
+    /* nessuno stile, è solo una classe semantica */
+}
+
+@layer utilities {
+    .masonry-grid {
+        @apply columns-1 sm:columns-1 md:columns-2 lg:columns-3;
+    }
+
+    .masonry-item {
+        @apply break-inside-avoid
+    }
+}
+
+.clickable-card{
+    @apply transform transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl active:scale-95;
+}
+
+.card-description {
+    hyphens: auto;
+    overflow-wrap: break-word;
+}
+
+.card-description::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2rem;
+}
+
+.card-description.expanded::after {
+    opacity: 0;
+}
+
+
+
+.btn {
+    border-radius: 32px !important;
+}
+
+.force-outline:disabled {
+    @apply border text-gray-600 border-gray-600 bg-transparent cursor-not-allowed;
+}
+
+#particlesBackground canvas {
+    width: 100% !important;
+    height: 93% !important;
+}
+
+.main-body {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+}
+
+.progress-mobile {
+    @apply progress-primary;
+}
+
+.progress-web {
+    @apply progress-accent;
+}
+
+.progress-db {
+    @apply progress-warning;
+}
+
+.progress-media {
+    @apply progress-error;
+}
+
+.progress-languages {
+    @apply progress-success;
+}
+
+.divider-mobile {
+    @apply divider-primary;
+}
+
+.divider-web {
+    @apply divider-accent;
+}
+
+.divider-db {
+    @apply divider-warning;
+}
+
+.divider-media {
+    @apply divider-error;
+}
+
+.divider-languages {
+    @apply divider-success
+}
+
+.clickable-card{
+    @apply transform transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl active:scale-95;
+}

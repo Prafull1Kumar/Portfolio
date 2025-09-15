@@ -1,0 +1,8 @@
+export const LANDING_PAGE_T_NODE = 'landingPage'
+export const TITLE = 'title'
+export const BIO = 'bio'
+export const VISIT_BTN = 'visitBtn'
+export const OR = 'or'
+export const GET_CV_BTN = 'getCvBtn'
+export const CV_PATH = '/MatteoMartinelliCv_'
+export const HOME_SECTION = 'home'

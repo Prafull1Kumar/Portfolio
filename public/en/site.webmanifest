@@ -1,0 +1,20 @@
+{
+  "name": "Matteo Tvoosai Portfolio",
+  "short_name": "Tvoosai",
+  "start_url": "/en/",
+  "display": "standalone",
+  "description": "Explore the portfolio of Matteo Tvoosai, a freelance developer experienced in Flutter, React, and modern backend technologies.",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

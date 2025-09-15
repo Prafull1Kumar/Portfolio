@@ -1,0 +1,6 @@
+export const PROJECTS_T_NODE = 'projects'
+export const MARVEL = 'afse'
+export const PORTFOLIO = 'portfolio'
+export const FAKE_FOOTBALL = 'fakeFootball'
+export const TRIVIA = 'trivia'
+export const PROJECT_SECTION = 'projects'
