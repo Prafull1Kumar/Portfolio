@@ -16,8 +16,8 @@ export async function POST(req) {
             return NextResponse.json({succcess: false}, {status: 400})
 
         const {_, error} = await resend.emails.send({
-            from: `${name} richiesta <contact@tvoosai.dev>`,
-            to: ['tvoosai@gmail.com'],
+            from: `${name} contact <contact@prafullkumar.dev>`,
+            to: ['prafull.prajapati@utdallas.edu'],
             trackClicks: false,
             trackOpens: false,
             subject: `Contattato da ${name}`,
