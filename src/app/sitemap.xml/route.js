@@ -18,7 +18,7 @@ export async function GET() {
 ${routes
         .map(
             ({ path, priority }) => `
-  <url>
+  <url>s
     <loc>${baseUrl}${path ? `/${path}` : ''}</loc>
     <lastmod>${lastMod}</lastmod>
     <changefreq>monthly</changefreq>
