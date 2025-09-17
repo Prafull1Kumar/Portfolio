@@ -23,10 +23,10 @@ function Landing() {
 
                     <image
                         href="/prafull.webp"
-                        x="-17.3"
-                        y="-10"
-                        width="110"
-                        height="110"
+                        x="-60"
+                        y="-30"
+                        width="140"
+                        height="140"
                         mask="url(#triangleMask)"
                     />
                 </svg>

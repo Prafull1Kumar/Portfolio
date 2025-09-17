@@ -1,7 +1,7 @@
 {
   "landingPage": {
-    "title": "\uD83D\uDC4B I'm Matteo Martinelli",
-    "bio": "I'm a passionate Software Engineer with experience in both mobile and web, with a strong focus on cybersecurity. For me, programming is the art of abstracting the world around us into elegant and efficient solutions.",
+    "title": "\uD83D\uDC4B I'm Prafull Kumar Prajapati",
+    "bio": "I’m a passionate Software Engineer with a strong background in backend development and distributed systems, complemented by experience across cloud infrastructure and data-intensive applications. For me, programming is the art of abstracting the world around us into elegant and efficient solutions.",
     "visitBtn": "Visit",
     "or": "or",
     "getCvBtn": "Get the CV"
@@ -14,45 +14,40 @@
     "contact": "Contact"
   },
   "experience": {
-    "bachelorBegin": {
-      "title": "Bachelor's Degree in Computer Science @Unimi",
-      "description": "During my time at the University of Milan (Unimi), I pursued a Bachelor\\'s degree in Computer Science, developing a solid foundation in key areas of the field such as algorithms, data structures, programming, operating systems, and databases. Alongside my studies, I worked full-time, which limited the time I could fully dedicate to university. As a result, I decided to pause my studies to focus on my professional growth and career development. This decision allowed me to gain valuable hands-on experience in software development, which has been instrumental in shaping my technical skills.",
-      "time": "2016-2018"
-    },
-    "androidDsGroup": {
-      "title": "Android developer @DSGroup",
-      "description": "During this time, I worked on a B2B project for Poste Italiane, collaborating with designers, backend developers, and analysts to find the best solutions. This experience allowed me to work with both legacy and modern approaches to Android development. On the legacy side, I worked with Java, MVC, MVP, SQLite, and Room on devices running older versions of the operating system. On the other hand, I also gained experience with newer technologies such as Android Jetpack, Kotlin, MVVM, LiveData, Room, and Retrofit, working on more innovative solutions. Additionally, I was responsible for implementing both UI and non-UI tests (including unit tests and integration tests), ensuring the quality and reliability of the applications we developed.",
-      "time": "2018-2020"
-    },
-    "flutterDsGroup": {
-      "title": "Android/Flutter Developer & Scrum Member \n@DSGroup",
-      "description": "During this period, I worked on projects for Enel, developing applications both for Android and using Flutter. This experience gave me a comprehensive understanding of the Android operating system, as I had to work at a lower level, utilizing content providers and other system components. As a member of a Scrum team, I was the only developer coordinating directly with the analyst for the implementation of two major projects. This role taught me how to handle large-scale projects independently, requiring strong problem-solving and project management skills. I was involved in the entire development lifecycle, from design and architecture to implementation and testing, gaining valuable experience in working autonomously on complex projects.",
-      "time": "2020-2024"
-    },
-    "flutterCert": {
-      "title": "ATC Flutter Certified Application Developer",
-      "description": "I obtained the ATC Flutter Certified Application Developer certification, which further validated my expertise in Flutter and Dart for mobile application development.",
-      "time": "2023"
-    },
-    "androidCert": {
-      "title": "Google Developers Android Certification",
-      "description": "I obtained the Google Developers Android Certification, validating my skills in Android application development and reinforcing my expertise in building high-quality, scalable Android apps.",
-      "time": "2023"
-    },
-    "scrumCert": {
-      "title": "PSM1 (Professional Scrum Master I)",
-      "description": "The Professional Scrum Master I (PSM I) certification demonstrates my understanding of Scrum principles and practices, focusing on the Scrum Master role. I gained skills in facilitating teams, resolving conflicts, and optimizing workflows to ensure continuous improvement and efficient Agile processes.",
-      "time": "2023"
-    },
-    "flutterKurt": {
-      "title": "Flutter Developer & Product designer \n@Kurt",
-      "description": "I briefly collaborated with a startup focused on connecting people who enjoy playing soccer. During this time, I contributed to the development of new features and made a significant impact on improving the user experience based on feedback from users. To this day, the voting system I designed is still in use.",
-      "time": "2024"
-    },
-    "bachelorContinue": {
-      "title": "Resuming university",
-      "description": "I decided to leave my full-time job and pursue a freelance career as a developer to better manage my time and complete my university studies. This decision was driven by my desire to continuously learn new skills. Since returning to university, I've enhanced my knowledge in functional programming and developed a strong passion for cybersecurity.",
+    "utdMasters": {
+      "title": "M.S. in Computer Science @UTD",
+      "description": "Currently pursuing my Master's degree at the University of Texas at Dallas with a perfect GPA of 4.0/4.0. Recipient of the Dean's Scholarship for Outstanding Academic Achievement. My coursework includes Database Design, Operating Systems, Object-Oriented Programming, Machine Learning, and Software Development. During my studies, I also completed a Summer 2025 internship at AWS and serve as a Teaching Assistant, mentoring students in Java and software engineering courses.",
       "time": "2024 – Present"
+    },
+    "awsIntern": {
+      "title": "Software Development Engineer Intern @AWS (During MS)",
+      "description": "During my Master's program, I interned at Amazon Web Services in Seattle, where I integrated Java-based long polling in DynamoDB microservices to reduce redundant requests. I evaluated multiple design approaches for scalability and growth, and optimized concurrency with configurable timeouts and async request-reply patterns. This work resulted in an 84% reduction in total requests, significantly lowering CPU usage, memory consumption, file descriptor usage, and network I/O.",
+      "time": "Summer 2025"
+    },
+    "livsytLead": {
+      "title": "Backend Team Lead @LivSYT",
+      "description": "Led the backend team and successfully migrated services from AWS to Azure, resulting in a 25% reduction in infrastructure costs. Designed scalable microservices using TypeScript with Sequelize and Node.js. Implemented deployments using AWS Lambda and SAM, improving Lambda cold start times by 30%. Managed CI/CD pipelines using Azure DevOps and led a team of 4 engineers, securing key clients through rapid API delivery.",
+      "time": "Jun 2021 – Jul 2024"
+    },
+    "arthDev": {
+      "title": "Software Developer @Arth",
+      "description": "Built API Gateway and SES integration for email delivery, reducing rejected emails by 60% through implementation of an SQS retry mechanism. Designed .NET microservices on Azure Cloud, achieving 99.9% uptime. Developed comprehensive unit testing infrastructure with in-memory database integration.",
+      "time": "Jan 2021 – May 2021"
+    },
+    "iitKgp": {
+      "title": "B.Tech in Aerospace Engineering @IIT Kharagpur",
+      "description": "Graduated from the prestigious Indian Institute of Technology, Kharagpur with a GPA of 3.3/4.0. Coursework included Data Structures & Algorithms, Probability & Statistics, and Computer Architecture. Served as Secretary of Cricket, managing an $80k budget and leading the team to a bronze medal.",
+      "time": "2017 – 2021"
+    },
+    "research": {
+      "title": "Research Publication",
+      "description": "Published research on 'Improving Algebraic Expression Generation using Crow Search-based Genetic Algorithm' at the 20th Applied Computing Conference (2023).",
+      "time": "2023"
+    },
+    "achievements": {
+      "title": "Technical Achievements",
+      "description": "Ranked in the top 1% on LeetCode (2022). Achieved top rankings in national engineering entrance exams: JEE Advanced (Top 3%) and JEE Mains (Top 0.6%) in 2017.",
+      "time": "2017 – Present"
     }
   },
   "skills": {
