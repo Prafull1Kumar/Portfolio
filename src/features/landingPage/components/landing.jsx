@@ -22,7 +22,7 @@ function Landing() {
                     <polygon points="1,2 98,50 1,98" className="fill-base-100"/>
 
                     <image
-                        href="/landingAvatar.webp"
+                        href="/prafull.webp"
                         x="-17.3"
                         y="-10"
                         width="110"
