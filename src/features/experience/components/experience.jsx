@@ -15,11 +15,11 @@ import {
 } from "@/features/experience/experience.constants";
 
 const keys = [
-    {id: UTD_MASTERS, isWork: false},
-    {id: AWS_INTERN, isWork: true},
-    {id: LIVSYT_LEAD, isWork: true},
-    {id: ARTH_DEV, isWork: true},
-    {id: IIT_KGP, isWork: false},
+    {id: UTD_MASTERS, isWork: false, company: 'UTD'},
+    {id: AWS_INTERN, isWork: true, company: 'AWS'},
+    {id: LIVSYT_LEAD, isWork: true, company: 'LIVSYT'},
+    {id: ARTH_DEV, isWork: true, company: 'ARTH'},
+    {id: IIT_KGP, isWork: false, company: 'IITKGP'},
     {id: RESEARCH, isWork: false},
     {id: ACHIEVEMENTS, isWork: false}
 ]
@@ -33,7 +33,7 @@ function Experience() {
         {exp.map((item, index) => (<RevealOnScroll key={index}>
             <li className="transition-all duration-1000 delay-100 ease-out opacity-0 scale-0 pointer-events-none">
                 <hr/>
-                <TimelineIcon work={item.work}></TimelineIcon>
+                <TimelineIcon work={item.work} company={item.company}></TimelineIcon>
                 <TimelineElement left={index % 2 === 0} time={item.time} title={item.title}>
                     {item.description}
                 </TimelineElement>
@@ -50,7 +50,8 @@ function translateExperiences(t) {
             t(`${entry.id}.title`),
             t(`${entry.id}.description`),
             t(`${entry.id}.time`),
-            entry.isWork
+            entry.isWork,
+            entry.company
         ))
 }
 

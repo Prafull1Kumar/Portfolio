@@ -8,6 +8,7 @@ import FloatingActionButton from "@/components/ui/floatingActionButton";
 import ScrollSyncUrl from "@/components/logic/scrollSyncUrl";
 import {Analytics} from "@vercel/analytics/react"
 import HomeDetector from "@/components/logic/homeDetector";
+import GithubContributions from "@/components/ui/githubCalendar";
 import {HOME_SECTION} from "@/features/landingPage/landingPage.constants";
 import {EXPERIENCE_SECTION} from "@/features/experience/experience.constants";
 import {SKILL_SECTION} from "@/features/skills/skills.constants";
@@ -29,6 +30,7 @@ export default function Home() {
                 <Experience></Experience></section>
             <section id={SKILL_SECTION} className="min-h-screen flex items-center justify-center">
                 <Knowledge></Knowledge></section>
+            <GithubContributions />
             <section id={PROJECT_SECTION}
                      className="min-h-screen flex items-center justify-center scroll-mt-20 lg:scroll-mt-28">
                 <Projects></Projects></section>
