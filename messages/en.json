@@ -1,7 +1,7 @@
 {
   "landingPage": {
     "title": "\uD83D\uDC4B I'm Prafull Kumar Prajapati",
-    "bio": "I’m a passionate Software Engineer with a strong background in backend development and distributed systems, complemented by experience across cloud infrastructure and data-intensive applications. For me, programming is the art of abstracting the world around us into elegant and efficient solutions.",
+    "bio": "I'm a passionate Software Engineer with a strong background in backend development and distributed systems, complemented by experience across cloud infrastructure and data-intensive applications. For me, programming is the art of abstracting the world around us into elegant and efficient solutions.",
     "visitBtn": "Visit",
     "or": "or",
     "getCvBtn": "Get the CV"
@@ -51,7 +51,7 @@
     }
   },
   "skills": {
-    "java":"java:",
+    "java": "java:",
     "kotlin": "kotlin:",
     "flutter": "flutter:",
     "javascript": "javascript:",
@@ -79,8 +79,12 @@
       "description": "Discover a web application built entirely with vanilla JavaScript, developed for a university exam. This app allows users to collect, buy, and trade Marvel stickers. The frontend is powered by a custom framework I created to ensure a smooth Single Page Application (SPA) experience, providing seamless navigation. Enjoy an intuitive interface for managing your collection and engaging in trades with others."
     },
     "portfolio": {
-      "title":"Personal portfolio",
-      "description":"Explore my portfolio built with Next.js and styled using Tailwind CSS and DaisyUI. The site is fully responsive, multilingual (Italian, English, and German), and automatically adapts to the user’s system preferences for language and color scheme (light or dark mode), providing a personalized and accessible experience.\nI have focused on both server-side and client-side rendering optimizations to ensure fast load times and high performance. The interface is modern and consistent, designed to highlight my skills, projects, and professional experience.\nThe website is optimized for both technical and semantic SEO: it uses structured tags, localized dynamic metadata (title, description, canonical, hreflang), supports Twitter Cards and Open Graph for effective social sharing, and implements a multilingual sitemap and a custom robots.txt file. It follows Google’s mobile-first indexing guidelines and accessibility best practices."
+      "title": "Personal portfolio",
+      "description": "Explore my portfolio built with Next.js and styled using Tailwind CSS and DaisyUI. The site is fully responsive, multilingual (Italian, English, and German), and automatically adapts to the user's system preferences for language and color scheme (light or dark mode), providing a personalized and accessible experience.\nI have focused on both server-side and client-side rendering optimizations to ensure fast load times and high performance. The interface is modern and consistent, designed to highlight my skills, projects, and professional experience.\nThe website is optimized for both technical and semantic SEO: it uses structured tags, localized dynamic metadata (title, description, canonical, hreflang), supports Twitter Cards and Open Graph for effective social sharing, and implements a multilingual sitemap and a custom robots.txt file. It follows Google's mobile-first indexing guidelines and accessibility best practices."
+    },
+    "sustain": {
+      "title": "Sustain – Solo HackUTD 2024 Project",
+      "description": "Sustain is a solo 24-hour hackathon project I created at HackUTD 2024 to quantify sustainability metrics for real estate properties. The web app helps inspectors and property managers evaluate and visualize a building's environmental performance by categorizing it into sustainability tiers. Built with Node.js (LoopBack) and PostgreSQL on Amazon RDS, and deployed on AWS EC2 with a responsive HTML/CSS frontend, the project demonstrates my ability to deliver a full-stack, cloud-deployed solution under intense time constraints while addressing a real-world problem in sustainable development."
     },
     "fakeFootball": {
       "title": "Team Management & Match Streaming",
@@ -99,7 +103,7 @@
     "emailForm": "Email",
     "messageForm": "Message",
     "submitBtn": "Submit",
-    "okBtn":"Message sent",
+    "okBtn": "Message sent",
     "errorBtn": "Something went wrong",
     "contactTitle": "contact info",
     "location": "Richardson, TX",
@@ -107,24 +111,24 @@
   },
   "meta": {
     "home": {
-      "title": "Tvoosai – Mobile & Web Developer Freelance",
-      "description": "Portfolio of Matteo, a mobile and web freelance developer skilled in Flutter, React, and modern backend technologies."
+      "title": "Prafull Kumar Prajapati - Software Engineer",
+      "description": "Portfolio of Prafull Kumar Prajapati, a software engineer specializing in backend development, distributed systems, and cloud infrastructure."
     },
     "experience": {
-      "title": "Work Experience – Flutter, React, Backend | Tvoosai",
-      "description": "Explore Matteo's work experience and certifications in mobile and web development."
+      "title": "Experience - Prafull Kumar Prajapati",
+      "description": "Explore Prafull's work experience in software engineering, including roles at AWS, LivSYT, and more."
     },
     "skills": {
-      "title": "Technical Skills – Tech Stack | Tvoosai",
-      "description": "Programming languages, tools, and technologies Matteo uses in his projects."
+      "title": "Skills - Prafull Kumar Prajapati",
+      "description": "Programming languages, tools, and technologies Prafull uses in his projects."
     },
     "projects": {
-      "title": "Projects – Matteo’s Portfolio | Tvoosai",
-      "description": "A selection of personal and commercial projects developed by Matteo."
+      "title": "Projects - Prafull Kumar Prajapati",
+      "description": "A selection of personal and professional projects developed by Prafull."
     },
     "contact": {
-      "title": "Contact Me – Freelance & Collaborations | Tvoosai",
-      "description": "Get in touch with Matteo for collaborations, freelance opportunities, or tech networking."
+      "title": "Contact - Prafull Kumar Prajapati",
+      "description": "Get in touch with Prafull for collaborations, opportunities, or tech networking."
     }
   }
 }

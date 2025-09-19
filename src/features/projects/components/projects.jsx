@@ -2,7 +2,7 @@ import ProjectEntry from "@/features/projects/model/projectEntry";
 import ProjectCard from "@/features/projects/components/projectCard";
 import MasonryLayout from "@/components/layout/masonryLayout";
 import {useTranslations} from "next-intl";
-import {PROJECTS_T_NODE, MARVEL, PORTFOLIO, FAKE_FOOTBALL, TRIVIA} from "@/features/projects/projects.constants";
+import {PROJECTS_T_NODE, MARVEL, PORTFOLIO, FAKE_FOOTBALL, TRIVIA, SUSTAIN} from "@/features/projects/projects.constants";
 
 const m = [
     {
@@ -26,6 +26,12 @@ const m = [
         key: TRIVIA,
         imageUrl: '/trivia.webp',
         techList: ['Flutter', 'Bloc', 'NoSQL']
+    },
+    {
+        key: SUSTAIN,
+        imageUrl: '/sustain.jpg',
+        url: 'https://github.com/Prafull1Kumar/Sustain',
+        techList: ['Python', 'Scikit-learn', 'React', 'Node.js', 'PostgreSQL']
     },
 ]
 
