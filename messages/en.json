@@ -94,6 +94,10 @@
       "title": "Trivia Escape",
       "description": "Join a 2D space-themed trivia adventure! Guide the ball through intricate mazes by answering questions correctly to reach the exit. The game features two modes: a relaxed mode without time limits, and a timed mode for those seeking a tougher challenge. The long-term goal is to evolve the project into a multiplayer experience, making it even more engaging and competitive."
     },
+    "ideologies": {
+      "title": "Ideologies Search Engine",
+      "description": "I built a custom search engine for ideological topics, handling everything from web crawling and data cleaning to indexing and relevance modeling. Using Python, I crawled hundreds of web pages, removed duplicates, and extracted hyperlinks to create a web graph. I implemented TF-IDF indexing, PageRank, and HITS algorithms to rank results, and used clustering to group related pages.\n\nThe React-based user interface displays results from my engine alongside Google and Bing for comparison, offering clear, relevant answers for queries like 'liberalism' and 'socialism vs capitalism.' This project demonstrates my skills in full-stack development, data processing, and search technologies."
+    },
     "public": "public",
     "private": "private"
   },
