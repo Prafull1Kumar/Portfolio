@@ -1,5 +1,5 @@
 const IconWrapper = ({ children, className = "" }) => (
-    <div className={`w-7 h-7 flex items-center justify-center bg-white rounded-md overflow-hidden ${className}`}>
+    <div className={`w-10 h-10 flex items-center justify-center bg-white rounded-md overflow-hidden ${className}`}>
         {children}
     </div>
 );
