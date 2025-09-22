@@ -6,26 +6,10 @@ import {PROJECTS_T_NODE, MARVEL, PORTFOLIO, FAKE_FOOTBALL, TRIVIA, SUSTAIN, IDEO
 
 const m = [
     {
-        key: MARVEL,
-        imageUrl: '/afse.webp',
-        url: 'https://github.com/MatteoMartinelliMM/afse',
-        techList: ['Javascript', 'Bootstrap', 'NodeJS', 'MongoDB']
-    },
-    {
         key: PORTFOLIO,
         imageUrl: '/portfolio.webp',
         url: 'https://github.com/MatteoMartinelliMM/portfolio',
         techList: ['NextJS', 'React', 'TailwindCSS', 'DaisyUI']
-    },
-    {
-        key: FAKE_FOOTBALL,
-        imageUrl: '/fakeFootball.webp',
-        techList: ['Flutter', 'Bloc', 'Firebase', 'FFmpeg']
-    },
-    {
-        key: TRIVIA,
-        imageUrl: '/trivia.webp',
-        techList: ['Flutter', 'Bloc', 'NoSQL']
     },
     {
         key: SUSTAIN,
