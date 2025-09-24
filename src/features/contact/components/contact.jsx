@@ -17,11 +17,11 @@ function Contact() {
                     <h2 className="footer-title text-xl lg:text-2xl">{t(CONTACT_TITLE)}</h2>
                     <div className="flex items-center gap-8 mt-5">
                         <MailIcon className="size-6" />
-                        <a className="link link-hover text-lg" href="mailto:prafull.prajapati@utdallas.edu">prafull.prajapati@utdallas.edu</a>
+                        <a className="link link-hover text-lg" href="mailto:prajapatiprafull12@gmail.com">prajapatiprafull12@gmail.com</a>
                     </div>
                     <div className="flex items-center gap-8 mt-5">
                         <PhoneIcon />
-                        <a className="link link-hover text-lg" href="tel:+19452685954">+1 (945) 268-5954</a>
+                        <a className="link link-hover text-lg" href="tel:+19452685954">+1 9452685954</a>
                     </div>
                     <div className="flex items-center gap-8 mt-5">
                         <MarkerIcon />

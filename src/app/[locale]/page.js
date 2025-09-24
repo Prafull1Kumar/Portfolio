@@ -30,7 +30,6 @@ export default function Home() {
                 <Experience></Experience></section>
             <section id={SKILL_SECTION} className="min-h-screen flex items-center justify-center">
                 <Knowledge></Knowledge></section>
-            <GithubContributions />
             <section id={PROJECT_SECTION}
                      className="min-h-screen flex items-center justify-center scroll-mt-20 lg:scroll-mt-28">
                 <Projects></Projects></section>
