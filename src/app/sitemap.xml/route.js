@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server'
 export const runtime = 'edge'
 
 export async function GET() {
-    const baseUrl = 'https://tvoosai.dev' // ✅ senza www
+    const baseUrl = 'https://prafull.tech/' // ✅ senza www
     const lastMod = process.env.NEXT_PUBLIC_LASTMOD || '2025-01-01'
 
     const routes = [

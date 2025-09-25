@@ -9,13 +9,13 @@ export async function generateMetadata({params}) {
 
     const metadataByLocale = {
         it: {
-            title: 'Portfolio Matteo Tvoosai',
+            title: 'Portfolio Prafull Prajapati ',
             description: 'Scopri il portfolio di Matteo, sviluppatore freelance Mobile e Web.',
             locale: 'it_IT',
         },
         en: {
-            title: 'Matteo Tvoosai Portfolio',
-            description: 'Explore Matteo\'s portfolio, a freelance Mobile & Web developer.',
+            title: 'Portfolio Prafull Prajapati',
+            description: 'Explore Prafull\'s portfolio, a Backend & cloud developer.',
             locale: 'en_US',
         },
         de: {
@@ -39,7 +39,7 @@ export async function generateMetadata({params}) {
             description: meta.description,
             locale: meta.locale,
             url: `${baseUrl}/${locale}`,
-            siteName: 'Tvoosai Portfolio',
+            siteName: 'Prafull Portfolio',
             images: [
                 {
                     url: `${baseUrl}/og-image.png`,
