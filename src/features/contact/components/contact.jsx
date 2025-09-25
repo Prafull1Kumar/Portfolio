@@ -17,7 +17,7 @@ function Contact() {
                     <h2 className="footer-title text-xl lg:text-2xl">{t(CONTACT_TITLE)}</h2>
                     <div className="flex items-center gap-8 mt-5">
                         <MailIcon className="size-6" />
-                        <a className="link link-hover text-lg" href="mailto:prajapatiprafull12@gmail.com">prajapatiprafull12@gmail.com</a>
+                        <a className="link link-hover text-lg" href="mailto:prajapatiprafull12@gmail.com">pxp240022@utdallas.edu</a>
                     </div>
                     <div className="flex items-center gap-8 mt-5">
                         <PhoneIcon />
