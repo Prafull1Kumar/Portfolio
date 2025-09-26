@@ -43,7 +43,8 @@ const TechSkills = () => {
                 { name: 'VS Code', icon: '/skills/VsCode.png', color: 'rgb(0, 122, 204)' },
                 { name: 'AWS', icon: '/skills/aws.png', color: 'rgb(255, 153, 0)' },
                 { name: 'Azure', icon: '/skills/Azure.png', color: 'rgb(0, 127, 255)' },
-                { name: 'Linux', icon: '/skills/linux.png', color: 'rgb(255, 221, 0)' }
+                { name: 'Linux', icon: '/skills/linux.png', color: 'rgb(255, 221, 0)' },
+                { name: 'Postman', icon: '/skills/Postman.png', color: 'rgb(255, 108, 55)' }
             ]
         }
     ];
