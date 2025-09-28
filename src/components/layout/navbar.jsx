@@ -26,7 +26,7 @@ function Navbar() {
                 </div>
             </div>
             <div className="navbar-end">
-                <LanguageDropdown/>
+                {/* <LanguageDropdown/> */}
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" aria-label="Open navigation menu" className="btn btn-ghost lg:hidden">
                         <HamburgerMenu></HamburgerMenu>
