@@ -51,16 +51,15 @@ const TechSkills = () => {
 
     return (
         <div className="w-full max-w-7xl mx-auto px-4 py-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-purple-400 via-pink-300 to-blue-400 text-transparent bg-clip-text
-                animate-gradient bg-300% relative
+            <h1 className="text-4xl md:text-5xl font-bold mb-16 text-center text-base-content relative
                 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:w-24 after:h-1 after:bg-gradient-to-r 
-                after:from-purple-400 after:via-pink-300 after:to-blue-400 after:-translate-x-1/2 after:rounded-full">
+                after:from-primary/60 after:to-accent/60 after:-translate-x-1/2 after:rounded-full">
                 TECH SKILLS
             </h1>
             <div className="space-y-16">
                 {skillCategories.map((category, categoryIndex) => (
                     <div key={category.title} className="space-y-8">
-                        <h2 className="text-2xl font-semibold text-white/90 text-center">
+                        <h2 className="text-2xl font-semibold text-base-content/90 text-center">
                             {category.title}
                         </h2>
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
@@ -74,13 +73,13 @@ const TechSkills = () => {
                                         opacity: 0
                                     }}
                                 >
-                                    <div className="relative w-20 h-20 bg-opacity-10 bg-white backdrop-blur-sm rounded-xl p-4 
-                                        shadow-[0_0_15px_rgba(255,255,255,0.07)] 
-                                        group-hover:shadow-[0_0_25px_rgba(255,255,255,0.15)] 
+                                    <div className="relative w-20 h-20 bg-base-content/10 backdrop-blur-sm rounded-xl p-4 
+                                        shadow-[0_0_15px_hsl(var(--bc)/0.07)] 
+                                        group-hover:shadow-[0_0_25px_hsl(var(--bc)/0.15)] 
                                         transition-all duration-300 ease-in-out 
                                         flex items-center justify-center 
                                         overflow-hidden
-                                        before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/10 before:to-transparent before:opacity-0 
+                                        before:absolute before:inset-0 before:bg-gradient-to-br before:from-base-content/10 before:to-transparent before:opacity-0 
                                         group-hover:before:opacity-100 before:transition-opacity before:duration-300"
                                     >
                                         <img
@@ -91,7 +90,7 @@ const TechSkills = () => {
                                             className="max-w-full max-h-full transform group-hover:scale-110 transition-transform duration-300 relative z-10"
                                         />
                                     </div>
-                                    <span className="text-sm font-medium text-white/80 group-hover:text-white transition-colors duration-300">{skill.name}</span>
+                                    <span className="text-sm font-medium text-base-content/80 group-hover:text-base-content transition-colors duration-300">{skill.name}</span>
                                 </div>
                             ))}
                         </div>
