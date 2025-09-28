@@ -12,10 +12,17 @@ function Navbar() {
     const t = useTranslations('navbar')
     return <>
         <div className="navbar bg-base-100 text-neutral-content w-full sticky top-0 left-0 z-20">
-            <div className="navbar-start">
+            <div className="navbar-start pl-2 md:pl-4">
 
                 <div className="flex-1">
-                    <Image src="/logo.svg" alt="home" width={128} height={32} className="h-4 w-auto" priority/>
+                    <Image
+                        src="/prafull_logo.png"
+                        alt="Prafull logo"
+                        width={128}
+                        height={32}
+                        className="h-24 w-auto"
+                        priority
+                    />
                 </div>
             </div>
             <div className="navbar-end">

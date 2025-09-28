@@ -20,7 +20,7 @@ export default async  function RootLayout({children, params}) {
     return (
         <html lang={locale}>
         <head>
-            <link rel="icon" href="/logo_short.svg"/>
+            <link rel="icon" href="/prafull_logo.png"/>
             <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)" />
             <meta name="theme-color" content="#111827" media="(prefers-color-scheme: dark)" />
             <meta name="background-color" content="#faf9f6" media="(prefers-color-scheme: light)" />
