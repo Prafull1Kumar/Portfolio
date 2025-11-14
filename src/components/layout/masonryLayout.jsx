@@ -30,7 +30,7 @@ function MasonryLayout({children}) {
         childrenArray.forEach((item, index) => newColumns[index % columnCount].push(item))
 
         setColumns(newColumns)
-    }, [columnCount])
+    }, [columnCount, childrenArray])
 
     return (
         <div className="flex ">

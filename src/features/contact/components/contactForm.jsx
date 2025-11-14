@@ -36,39 +36,30 @@ function ContactForm() {
         }
     }, [state.msgSent, state.error])
 
-    return (<form id="contact-form" onSubmit={onSubmit}>
-        <h2 className="footer-title text-xl lg:text-2xl flex items-center">{t(FORM_TITLE)}</h2>
-        <label className="form-control ">
-            <div className="label">
-                <span className="label-text text-lg">{t(NAME_FORM)}</span>
-            </div>
+    return (<form id="contact-form" onSubmit={onSubmit} className="space-y-5">
+        <p className="text-xs uppercase tracking-[0.4em] text-slate-300/80">{t(FORM_TITLE)}</p>
+        <label className="flex flex-col gap-2">
+            <span className="text-xs uppercase tracking-[0.3em] text-slate-400">{t(NAME_FORM)}</span>
             <input type="text" onChange={onNameChange} value={state.name}
-                   className={`input input-bordered input-md input-primary w-full transition-all duration-300 ease-in-out
-                   ${isFieldDisabled(state) ? 'opacity-50 cursor-not-allowed' : 'opacity-100 cursor-text'}`}
+                   className={`w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-emerald-300 focus:outline-none focus:ring-2 focus:ring-emerald-300/40 ${isFieldDisabled(state) ? 'opacity-60 cursor-not-allowed' : 'opacity-100'}`}
+                   placeholder="Ada Lovelace"
                    disabled={isFieldDisabled(state)}/>
         </label>
-        <label className="form-control">
-            <div className="label">
-                <span className="label-text text-lg">{t(EMAIL_FORM)}</span>
-            </div>
+        <label className="flex flex-col gap-2">
+            <span className="text-xs uppercase tracking-[0.3em] text-slate-400">{t(EMAIL_FORM)}</span>
             <input type="email" onChange={onMailChange} value={state.email}
-                   className={`input validator input-bordered input-md input-primary w-full transition-all duration-300 ease-in-out
-                   ${isFieldDisabled(state) ? 'opacity-50 cursor-not-allowed' : 'opacity-100 cursor-text'}`}
+                   className={`w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-emerald-300 focus:outline-none focus:ring-2 focus:ring-emerald-300/40 ${isFieldDisabled(state) ? 'opacity-60 cursor-not-allowed' : 'opacity-100'}`}
+                   placeholder="you@email.com"
                    disabled={isFieldDisabled(state)}/>
-            <div className="label">
-          <span className={`label-text-alt text-error transition-opacity duration-150  
-                ${state.validMail ? 'opacity-0 pointer-events-none hidden' : 'opacity-100'}`}>
+            <span className={`text-xs text-rose-300 transition-opacity duration-150 ${state.validMail ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
             Enter valid email address
           </span>
-            </div>
         </label>
-        <label className="form-control">
-            <div className="label">
-                <span className="label-text text-lg">{t(MESSAGE_FORM)}</span>
-            </div>
-            <textarea className={`textarea textarea-primary h-24 w-full transition-all duration-300 ease-in-out
-                   ${isFieldDisabled(state) ? 'opacity-50 cursor-not-allowed' : 'opacity-100 cursor-text'}`}
+        <label className="flex flex-col gap-2">
+            <span className="text-xs uppercase tracking-[0.3em] text-slate-400">{t(MESSAGE_FORM)}</span>
+            <textarea className={`min-h-[140px] w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm text-white placeholder-slate-500 focus:border-emerald-300 focus:outline-none focus:ring-2 focus:ring-emerald-300/40 ${isFieldDisabled(state) ? 'opacity-60 cursor-not-allowed' : 'opacity-100'}`}
                       onChange={onMsgChange} value={state.msg}
+                      placeholder="Tell me about your idea, challenge or roadmap."
                       disabled={isFieldDisabled(state)}></textarea>
         </label>
         <input type="text" name="faxNumber" className="hidden" autoComplete="off" tabIndex="-1" aria-hidden="true"/>

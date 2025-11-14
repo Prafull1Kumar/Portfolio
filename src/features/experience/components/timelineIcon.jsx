@@ -1,7 +1,6 @@
 import WorkIcon from "@/components/icons/workIcon.jsx";
 import StudyIcon from "@/components/icons/studyIcon.jsx";
 import { UTDIcon, AWSIcon, LivSYTIcon, ArthIcon, IITKGPIcon, CodeHerokuIcon } from "@/components/icons/companyLogos.jsx";
-import FadeComponent from "../../../components/motion/fadeComponent.jsx";
 
 // eslint-disable-next-line react/prop-types
 function TimelineIcon({work = true, company = ''}) {
@@ -25,7 +24,7 @@ function TimelineIcon({work = true, company = ''}) {
     };
 
     return (
-        <div className="timeline-middle flex items-center justify-center">
+        <div className="timeline-middle flex h-[58px] w-[58px] items-center justify-center rounded-full border border-white/20 bg-white/5 text-white shadow-[0_0_25px_rgba(34,197,94,0.35)]">
             {getIcon()}
         </div>
     )

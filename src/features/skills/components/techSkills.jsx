@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import {useTranslations} from "next-intl";
 
 const TechSkills = () => {
     const skillCategories = [
@@ -49,48 +50,47 @@ const TechSkills = () => {
         }
     ];
 
+    const navT = useTranslations('navbar');
+
     return (
-        <div className="w-full max-w-7xl mx-auto px-4 py-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-16 text-center text-base-content relative
-                after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:w-24 after:h-1 after:bg-gradient-to-r 
-                after:from-primary/60 after:to-accent/60 after:-translate-x-1/2 after:rounded-full">
-                TECH SKILLS
-            </h1>
-            <div className="space-y-16">
+        <div className="w-full space-y-16">
+            <div className="section-heading">
+                <span className="eyebrow">capabilities</span>
+                <h2><span>{navT('knowledge')}</span></h2>
+                <p className="max-w-2xl text-base text-slate-300/80">
+                    A curated toolbox of languages, frameworks, and platforms I rely on to turn complex problems into shipping software.
+                </p>
+            </div>
+            <div className="space-y-14">
                 {skillCategories.map((category, categoryIndex) => (
                     <div key={category.title} className="space-y-8">
-                        <h2 className="text-2xl font-semibold text-base-content/90 text-center">
-                            {category.title}
-                        </h2>
-                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
+                        <div className="flex flex-wrap items-center justify-between gap-4">
+                            <h3 className="text-2xl font-semibold text-white">{category.title}</h3>
+                            <span className="rounded-full border border-white/15 px-4 py-1 text-xs uppercase tracking-[0.3em] text-slate-300/80">
+                                focus {String(categoryIndex + 1).padStart(2, '0')}
+                            </span>
+                        </div>
+                        <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
                             {category.skills.map((skill, index) => (
                                 <div
                                     key={skill.name}
-                                    className="flex flex-col items-center gap-4 group"
+                                    className="glow-card group flex flex-col items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-center transition duration-500 hover:-translate-y-1"
                                     style={{
                                         animation: `fadeIn 0.5s ease-out forwards`,
                                         animationDelay: `${(categoryIndex * 0.1) + (index * 0.1)}s`,
                                         opacity: 0
                                     }}
                                 >
-                                    <div className="relative w-20 h-20 bg-base-content/10 backdrop-blur-sm rounded-xl p-4 
-                                        shadow-[0_0_15px_hsl(var(--bc)/0.07)] 
-                                        group-hover:shadow-[0_0_25px_hsl(var(--bc)/0.15)] 
-                                        transition-all duration-300 ease-in-out 
-                                        flex items-center justify-center 
-                                        overflow-hidden
-                                        before:absolute before:inset-0 before:bg-gradient-to-br before:from-base-content/10 before:to-transparent before:opacity-0 
-                                        group-hover:before:opacity-100 before:transition-opacity before:duration-300"
-                                    >
+                                    <div className="flex h-20 w-20 items-center justify-center rounded-2xl border border-white/10 bg-[rgba(15,23,42,0.45)]">
                                         <img
                                             src={skill.icon}
                                             alt={`${skill.name} icon`}
                                             width={48}
                                             height={48}
-                                            className="max-w-full max-h-full transform group-hover:scale-110 transition-transform duration-300 relative z-10"
+                                            className="max-w-full max-h-full transform transition-transform duration-300 group-hover:scale-110"
                                         />
                                     </div>
-                                    <span className="text-sm font-medium text-base-content/80 group-hover:text-base-content transition-colors duration-300">{skill.name}</span>
+                                    <span className="text-sm font-medium text-slate-100/90">{skill.name}</span>
                                 </div>
                             ))}
                         </div>

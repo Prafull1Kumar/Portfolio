@@ -3,35 +3,63 @@ import MailIcon from "@/components/icons/mailIcon";
 import PhoneIcon from "@/components/icons/phoneIcon";
 import ContactForm from "@/features/contact/components/contactForm";
 import {useTranslations} from "next-intl";
-import {CONTACT_T_NODE, CONTACT_TITLE, LOCATION, RIGHTS} from "@/features/contact/contact.constants";
+import {CONTACT_T_NODE, LOCATION, RIGHTS} from "@/features/contact/contact.constants";
 
 function Contact() {
     const t = useTranslations(CONTACT_T_NODE)
-    return <footer className="footer w-full bg-base-200">
-        <div className="w-full max-w-5xl mx-auto flex flex-col justify-center items-center min-h-[75vh] px-8 lg:px-0">
-            <div className="flex flex-col lg:flex-row gap-8 lg:gap-32 w-full items-start pt-0.5 lg:pt-0">
-                <div className="w-full lg:w-1/2 pt-6 lg:pt-0">
-                    <ContactForm />
-                </div>
-                <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
-                    <h2 className="footer-title text-xl lg:text-2xl">{t(CONTACT_TITLE)}</h2>
-                    <div className="flex items-center gap-8 mt-5">
-                        <MailIcon className="size-6" />
-                        <a className="link link-hover text-lg" href="mailto:prajapatiprafull12@gmail.com">pxp240022@utdallas.edu</a>
-                    </div>
-                    <div className="flex items-center gap-8 mt-5">
-                        <PhoneIcon />
-                        <a className="link link-hover text-lg" href="tel:+19452685954">+1 9452685954</a>
-                    </div>
-                    <div className="flex items-center gap-8 mt-5">
-                        <MarkerIcon />
-                        <p className="text-lg">{t(LOCATION)}</p>
-                    </div>
-                </div>
-            </div>
-            <p className="footer-title mt-8 text-center">{t(RIGHTS)}</p>
+    const navT = useTranslations('navbar')
+    const contactBlocks = [
+        {
+            icon: <MailIcon className="h-6 w-6 text-emerald-300"/>,
+            label: 'Email',
+            value: 'pxp240022@utdallas.edu',
+            href: 'mailto:pxp240022@utdallas.edu'
+        },
+        {
+            icon: <PhoneIcon className="h-6 w-6 text-emerald-300"/>,
+            label: 'Phone',
+            value: '+1 9452685954',
+            href: 'tel:+19452685954'
+        },
+        {
+            icon: <MarkerIcon className="h-6 w-6 text-emerald-300"/>,
+            label: 'Location',
+            value: t(LOCATION)
+        }
+    ]
+    return <div className="space-y-10">
+        <div className="section-heading">
+            <span className="eyebrow">connect</span>
+            <h2><span>{navT('contact')}</span></h2>
+            <p className="max-w-2xl text-base text-slate-300/80">
+                Ready for the next challenge? I’d love to hear about your product, research, or platform vision.
+            </p>
         </div>
-    </footer>
+        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="glow-card rounded-[28px] border border-white/10 bg-white/5 p-6 lg:p-8">
+                <ContactForm />
+            </div>
+            <div className="space-y-8">
+                {contactBlocks.map((block, idx) => (
+                    <div key={idx}
+                         className="glow-card flex items-start gap-4 rounded-2xl border border-white/10 bg-white/5 p-5">
+                        {block.icon}
+                        <div>
+                            <p className="text-xs uppercase tracking-[0.4em] text-slate-300/80">{block.label}</p>
+                            {block.href ? (
+                                <a href={block.href} className="text-lg font-semibold text-white hover:text-emerald-200">
+                                    {block.value}
+                                </a>
+                            ) : (
+                                <p className="text-lg font-semibold text-white">{block.value}</p>
+                            )}
+                        </div>
+                    </div>
+                ))}
+                <p className="text-center text-xs uppercase tracking-[0.4em] text-slate-400">{t(RIGHTS)}</p>
+            </div>
+        </div>
+    </div>
 
 }
 

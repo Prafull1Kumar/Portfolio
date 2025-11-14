@@ -26,14 +26,18 @@ const m = [
 ]
 
 function Projects() {
-    const mi = translateProjects(useTranslations(PROJECTS_T_NODE))
+    const projectT = useTranslations(PROJECTS_T_NODE)
+    const navT = useTranslations('navbar')
+    const mi = translateProjects(projectT)
     return (
-        <div className="w-full max-w-7xl mx-auto px-4 py-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-16 text-center text-base-content relative
-                after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:w-24 after:h-1 after:bg-gradient-to-r 
-                after:from-primary/60 after:to-accent/60 after:-translate-x-1/2 after:rounded-full">
-                PROJECTS
-            </h1>
+        <div className="w-full space-y-12">
+            <div className="section-heading">
+                <span className="eyebrow">case studies</span>
+                <h2><span>{navT('projects')}</span></h2>
+                <p className="max-w-3xl text-base text-slate-300/80">
+                    Systems, search engines, and hackathon builds that highlight how I translate constraints into thoughtful, resilient products.
+                </p>
+            </div>
             <MasonryLayout>
                 {mi.map((item, index) => (<ProjectCard key={index} project={item}></ProjectCard>))}
             </MasonryLayout>

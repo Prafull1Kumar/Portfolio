@@ -27,20 +27,31 @@ const experiences = [new ExperienceEntry("Bachelor's Degree in Computer Science 
 
 function Experience() {
     const exp = translateExperiences(useTranslations(EXPERIENCE_T_NODE))
-    return <ul
-        className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
-    >
-        {exp.map((item, index) => (<RevealOnScroll key={index}>
-            <li className="transition-all duration-1000 delay-100 ease-out opacity-0 scale-0 pointer-events-none">
-                <hr/>
-                <TimelineIcon work={item.work} company={item.company}></TimelineIcon>
-                <TimelineElement left={index % 2 === 0} time={item.time} title={item.title}>
-                    {item.description}
-                </TimelineElement>
-                <hr/>
-            </li>
-        </RevealOnScroll>))}
-    </ul>
+    const sectionT = useTranslations('navbar')
+    return <div>
+        <div className="section-heading">
+            <span className="eyebrow">journey</span>
+            <h2><span>{sectionT('experience')}</span></h2>
+            <p className="max-w-2xl text-base text-slate-300/80">
+                Leading backend, distributed systems, and platform initiatives across startups, enterprises, and research teams.
+            </p>
+        </div>
+        <ul
+            className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
+        >
+            {exp.map((item, index) => (<RevealOnScroll key={index}>
+                <li className="relative transition-all duration-700 ease-out">
+                    <hr className="border-white/10 opacity-30"/>
+                    <div className="absolute left-1/2 -translate-x-1/2 h-full w-px bg-gradient-to-b from-emerald-400/40 via-white/10 to-transparent" aria-hidden="true"></div>
+                    <TimelineIcon work={item.work} company={item.company}></TimelineIcon>
+                    <TimelineElement left={index % 2 === 0} time={item.time} title={item.title}>
+                        {item.description}
+                    </TimelineElement>
+                    <hr className="opacity-0"/>
+                </li>
+            </RevealOnScroll>))}
+        </ul>
+    </div>
 
 }
 

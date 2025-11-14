@@ -124,7 +124,7 @@ const ParticlesBackground = ({is404 = false}) => {
     }
 
     return state.isLoaded &&
-        <div className="w-full h-1/2">
+        <div className="h-full w-full">
             <Particles id="particlesBackground"
                        particlesLoaded={particlesLoaded}
                        options={state.options}>

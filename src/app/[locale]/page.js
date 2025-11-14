@@ -16,27 +16,38 @@ import {PROJECT_SECTION} from "@/features/projects/projects.constants";
 import {CONTACT_SECTION} from "@/features/contact/contact.constants";
 
 export default function Home() {
-    return <div className="flex flex-col items-center justify-center">
+    return <div className="relative flex min-h-screen w-full flex-col items-center">
         <Analytics/>
         <Navbar></Navbar>
-        <section id={HOME_SECTION} className="w-screen h-screen landing-section">
-            <div className=" relative w-screen h-[93%] flex items-center justify-center z-10">
-                <Landing></Landing>
-            </div>
-        </section>
-        <div className="main-body flex-grow ">
+        <main className="flex w-full flex-col items-center gap-20 px-4 pb-24 pt-32">
+            <section id={HOME_SECTION} className="w-full landing-section">
+                <div className="section-shell glass-panel">
+                    <Landing></Landing>
+                </div>
+            </section>
             <section id={EXPERIENCE_SECTION}
-                     className="min-h-screen w-full scroll-mt-28">
-                <Experience></Experience></section>
-            <section id={SKILL_SECTION} className="min-h-screen flex items-center justify-center">
-                <Knowledge></Knowledge></section>
+                     className="w-full scroll-mt-32">
+                <div className="section-shell glass-panel">
+                    <Experience></Experience>
+                </div>
+            </section>
+            <section id={SKILL_SECTION} className="w-full">
+                <div className="section-shell glass-panel">
+                    <Knowledge></Knowledge>
+                </div>
+            </section>
             <section id={PROJECT_SECTION}
-                     className="min-h-screen flex items-center justify-center scroll-mt-20 lg:scroll-mt-28">
-                <Projects></Projects></section>
-        </div>
-        <section id={CONTACT_SECTION} className="w-screen  mt-60">
-            <Contact></Contact>
-        </section>
+                     className="w-full scroll-mt-32">
+                <div className="section-shell glass-panel">
+                    <Projects></Projects>
+                </div>
+            </section>
+            <section id={CONTACT_SECTION} className="w-full">
+                <div className="section-shell glass-panel">
+                    <Contact></Contact>
+                </div>
+            </section>
+        </main>
         <HomeDetector/>
         <FloatingActionButton/>
         <ScrollSyncUrl/>

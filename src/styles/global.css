@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --surface-primary: rgba(13, 18, 38, 0.85);
+    --surface-secondary: rgba(5, 7, 18, 0.55);
+    --border-soft: rgba(241, 245, 249, 0.12);
+    --glow-emerald: 166 94% 52%;
+    --glow-sky: 205 92% 60%;
+    --glow-purple: 275 88% 65%;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -10,6 +19,30 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes pulseRing {
+    0% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.45);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(16, 185, 129, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
     }
 }
 
@@ -54,14 +87,37 @@
 */
 
 html {
-    @apply font-mono;
+    @apply font-sans antialiased;
     scroll-behavior: smooth;
+    background-color: #020617;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #020617;
+    background-image:
+            radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.16), transparent 40%),
+            radial-gradient(circle at 80% 0%, rgba(147, 51, 234, 0.12), transparent 32%),
+            radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.12), transparent 35%),
+            linear-gradient(135deg, #030014 0%, #030014 35%, #01010d 100%);
+    color: #f8fafc;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.03)' stroke-width='1'%3E%3Cpath d='M0 0h200v200H0z'/%3E%3Cpath d='M0 20h200M0 40h200M0 60h200M0 80h200M0 100h200M0 120h200M0 140h200M0 160h200M0 180h200M20 0v200M40 0v200M60 0v200M80 0v200M100 0v200M120 0v200M140 0v200M160 0v200M180 0v200'/%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: -1;
 }
 
 ::-webkit-scrollbar {
     display: none;
 }
-
 
 * {
     -ms-overflow-style: none;
@@ -69,7 +125,108 @@ html {
 }
 
 .landing-section {
-    /* nessuno stile, è solo una classe semantica */
+    position: relative;
+}
+
+.glass-panel {
+    background: linear-gradient(135deg, var(--surface-primary), var(--surface-secondary));
+    border: 1px solid var(--border-soft);
+    box-shadow: 0 25px 60px rgba(2, 6, 23, 0.65);
+    backdrop-filter: blur(22px);
+}
+
+.section-shell {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    padding: clamp(1.75rem, 3vw, 4rem);
+    border-radius: 32px;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.section-shell::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.section-shell::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(98, 188, 250, 0.15), transparent 55%);
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.section-shell > * {
+    position: relative;
+    z-index: 2;
+}
+
+.section-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.section-heading .eyebrow {
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: rgba(226, 232, 240, 0.7);
+}
+
+.section-heading h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    color: #f1f5f9;
+}
+
+.section-heading h2 span {
+    background: linear-gradient(90deg, hsl(var(--glow-emerald)), hsl(var(--glow-sky)) 50%, hsl(var(--glow-purple)));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.tag-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.95rem;
+    border-radius: 999px;
+    border: 1px solid rgba(45, 212, 191, 0.35);
+    background: rgba(16, 185, 129, 0.08);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: rgba(226, 252, 236, 0.9);
+}
+
+.glow-card {
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(148, 163, 184, 0.04));
+    box-shadow: 0 20px 50px rgba(3, 7, 18, 0.55);
+    backdrop-filter: blur(14px);
+}
+
+.blurred-sphere {
+    position: absolute;
+    width: clamp(200px, 35vw, 320px);
+    height: clamp(200px, 35vw, 320px);
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.55), transparent 55%);
+    filter: blur(40px);
+    opacity: 0.8;
+    pointer-events: none;
 }
 
 @layer utilities {
@@ -80,10 +237,6 @@ html {
     .masonry-item {
         @apply break-inside-avoid
     }
-}
-
-.clickable-card{
-    @apply transform transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl active:scale-95;
 }
 
 .card-description {
@@ -104,28 +257,22 @@ html {
     opacity: 0;
 }
 
-
-
-.btn {
-    border-radius: 32px !important;
-}
-
 .force-outline:disabled {
     @apply border text-gray-600 border-gray-600 bg-transparent cursor-not-allowed;
 }
 
 #particlesBackground canvas {
     width: 100% !important;
-    height: 93% !important;
+    height: 100% !important;
 }
 
 .main-body {
-    max-width: 1280px;
+    width: min(1200px, 100%);
     margin-left: auto;
     margin-right: auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: left;
 }
 
 .progress-mobile {
@@ -165,9 +312,9 @@ html {
 }
 
 .divider-languages {
-    @apply divider-success
+    @apply divider-success;
 }
 
-.clickable-card{
-    @apply transform transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl active:scale-95;
+.clickable-card {
+    @apply transition-transform duration-500 ease-out hover:-translate-y-2 hover:scale-105;
 }

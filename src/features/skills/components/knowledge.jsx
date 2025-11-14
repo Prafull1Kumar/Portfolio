@@ -3,7 +3,7 @@ import TechSkills from "./techSkills";
 
 function Knowledge() {
     return (
-        <div className="container mx-auto min-h-screen flex items-center justify-center">
+        <div className="w-full">
             <TechSkills />
         </div>
     );
