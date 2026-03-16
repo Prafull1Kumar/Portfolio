@@ -2,7 +2,7 @@ import ProjectEntry from "@/features/projects/model/projectEntry";
 import ProjectCard from "@/features/projects/components/projectCard";
 import MasonryLayout from "@/components/layout/masonryLayout";
 import {useTranslations} from "next-intl";
-import {PROJECTS_T_NODE, MARVEL, PORTFOLIO, FAKE_FOOTBALL, TRIVIA, SUSTAIN, IDEOLOGIES} from "@/features/projects/projects.constants";
+import {PROJECTS_T_NODE, PORTFOLIO, SUSTAIN, IDEOLOGIES, AI_JOB_OUTREACH_AGENT} from "@/features/projects/projects.constants";
 
 const m = [
     {
@@ -22,6 +22,12 @@ const m = [
         imageUrl: '/searchengine.png',
         url: 'https://github.com/Prafull1Kumar/Ideologies-Search-Engine.git',
         techList: ['Python', 'React', 'Node.js', 'TF-IDF', 'PageRank', 'HITS', 'Clustering']
+    },
+    {
+        key: AI_JOB_OUTREACH_AGENT,
+        imageUrl: '/appMockup.jpg',
+        url: 'https://github.com/Prafull1Kumar/AI-Job-Outreach-Agent',
+        techList: ['Python', 'OpenAI', 'Automation', 'LLMs', 'Job Search']
     },
 ]
 

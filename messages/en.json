@@ -86,6 +86,10 @@
       "title": "Ideologies Search Engine",
       "description": "I built a custom search engine for ideological topics, handling everything from web crawling and data cleaning to indexing and relevance modeling. Using Python, I crawled hundreds of web pages, removed duplicates, and extracted hyperlinks to create a web graph. I implemented TF-IDF indexing, PageRank, and HITS algorithms to rank results, and used clustering to group related pages.\n\nThe React-based user interface displays results from my engine alongside Google and Bing for comparison, offering clear, relevant answers for queries like 'liberalism' and 'socialism vs capitalism.' This project demonstrates my skills in full-stack development, data processing, and search technologies."
     },
+    "aiJobOutreachAgent": {
+      "title": "AI Job Outreach Agent",
+      "description": "An automation-focused project for streamlining job outreach workflows with AI assistance. It is designed to help identify roles, tailor outreach, and reduce repetitive application work by combining LLM-driven generation with a structured automation pipeline. The project highlights my interest in practical AI systems, workflow automation, and building tools that turn manual processes into scalable software."
+    },
     "public": "public",
     "private": "private"
   },
