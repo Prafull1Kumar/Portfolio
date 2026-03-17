@@ -25,7 +25,7 @@ const m = [
     },
     {
         key: AI_JOB_OUTREACH_AGENT,
-        imageUrl: '/appMockup.jpg',
+        imageUrl: '/aijoboutreachagent.jpg',
         url: 'https://github.com/Prafull1Kumar/AI-Job-Outreach-Agent',
         techList: ['Python', 'OpenAI', 'Automation', 'LLMs', 'Job Search']
     },

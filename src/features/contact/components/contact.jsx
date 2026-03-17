@@ -12,8 +12,8 @@ function Contact() {
         {
             icon: <MailIcon className="h-6 w-6 text-emerald-300"/>,
             label: 'Email',
-            value: 'pxp240022@utdallas.edu',
-            href: 'mailto:pxp240022@utdallas.edu'
+            value: 'prajapatiprafull12@gmail.com',
+            href: 'mailto:prajapatiprafull12@gmail.com'
         },
         {
             icon: <PhoneIcon className="h-6 w-6 text-emerald-300"/>,

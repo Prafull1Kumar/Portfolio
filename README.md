@@ -15,7 +15,7 @@ Modern, responsive personal portfolio built with Next.js (App Router), Tailwind 
 - Framer Motion for small animations
 - tsParticles for the landing background
 - react-github-calendar for contributions heatmap
-- Resend (email provider) for the contact form
+- Gmail API for the contact form
 
 ## Getting started
 
@@ -46,12 +46,14 @@ npm run lint
 
 Create a `.env.local` in the project root for local development.
 
-Required for contact form (Resend):
+Required for contact form (Gmail API):
 
 ```
-RESEND_API_KEY=your_resend_api_key
-CONTACT_TO=your_destination_email@example.com
-CONTACT_FROM=no-reply@your-domain.com
+GMAIL_CLIENT_ID=your_google_oauth_client_id
+GMAIL_CLIENT_SECRET=your_google_oauth_client_secret
+GMAIL_REFRESH_TOKEN=your_google_oauth_refresh_token
+GMAIL_SENDER_EMAIL=your_gmail_address@gmail.com
+GMAIL_TO_EMAIL=your_destination_email@example.com
 ```
 
 Other environment notes:
@@ -93,7 +95,7 @@ Public assets live in `public/` (images, icons, PDFs).
 - Skills grid with category grouping
 - Projects masonry layout with badges and external links
 - GitHub contributions heatmap
-- Contact form with client-side validation and Resend email delivery
+- Contact form with client-side validation and Gmail API delivery
 - i18n-ready routing with next-intl
 
 ## Customization guide
@@ -124,7 +126,7 @@ To add a new entry:
 - UI: `src/features/contact/components/contactForm.jsx`
 - API route: `src/app/api/contact/`
 - Email template: `mail/contactTemplate.js`
-- Configure `.env.local` with Resend keys as above.
+- Configure `.env.local` with Gmail OAuth credentials as above.
 
 ## Styling
 
@@ -170,4 +172,3 @@ Alternatively, you can self-host with `npm run build` and `npm start` behind a r
 ## License
 
 MIT — see `LICENSE` if present, or add one for your fork.
-

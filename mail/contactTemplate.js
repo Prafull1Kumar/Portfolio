@@ -35,8 +35,8 @@ function ContactTemplate({ name, email, message }) {
                                 }}
                             >
                                 <img
-                                    src="https://tvoosai.dev/logo.png"
-                                    alt="Logo"
+                                    src="https://prafull.tech/logo.png"
+                                    alt="Prafull Kumar logo"
                                     width="100"
                                     style={{ display: 'block', margin: '0 auto' }}
                                 />
@@ -45,7 +45,7 @@ function ContactTemplate({ name, email, message }) {
                         <tr>
                             <td style={{ padding: '30px 20px 10px', textAlign: 'left' }}>
                                 <strong style={{ fontSize: '18px' }}>
-                                    Contattato da {name} (<a href={`${email}`} style={{ color: '#FAF9F6' }}>{email}</a>):
+                                    Contacted by {name} (<a href={`mailto:${email}`} style={{ color: '#FAF9F6' }}>{email}</a>):
                                 </strong>
                             </td>
                         </tr>
