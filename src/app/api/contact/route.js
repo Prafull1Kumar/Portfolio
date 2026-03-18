@@ -1,5 +1,4 @@
 import {NextResponse} from 'next/server';
-import {renderToStaticMarkup} from 'react-dom/server';
 import ContactTemplate from "../../../../mail/contactTemplate";
 
 const GMAIL_TO_EMAIL = process.env.GMAIL_TO_EMAIL || 'prajapatiprafull12@gmail.com'
@@ -80,9 +79,11 @@ export async function POST(req) {
             return NextResponse.json({success: false, error: 'Missing required fields'}, {status: 400})
         }
 
-        const html = renderToStaticMarkup(
-            <ContactTemplate name={name.trim()} email={email.trim()} message={message.trim()}/>
-        )
+        const html = ContactTemplate({
+            name: name.trim(),
+            email: email.trim(),
+            message: message.trim()
+        })
 
         await sendViaGmail({
             fromName: `${name.trim()} contact`,
