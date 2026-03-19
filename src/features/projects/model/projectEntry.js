@@ -1,10 +1,11 @@
 class ProjectEntry {
-    constructor(title, description,imageUrl, url = undefined, techList) {
+    constructor(title, description,imageUrl, url = undefined, techList, screenshots = []) {
         this.title = title;
         this.description = description;
         this.imageUrl = imageUrl;
         this.url = url;
         this.techList = techList;
+        this.screenshots = screenshots.length ? screenshots : [imageUrl];
     }
 
     isPublic() {

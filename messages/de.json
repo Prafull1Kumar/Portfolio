@@ -91,6 +91,17 @@
       "title": "AI Job Outreach Agent",
       "description": "Ein Automatisierungsprojekt zur Optimierung von Job-Outreach-Workflows mit KI-Unterstützung. Es hilft dabei, passende Rollen zu identifizieren, personalisierte Ansprache zu erstellen und wiederkehrende Bewerbungsarbeit durch eine strukturierte, LLM-gestützte Pipeline zu reduzieren. Das Projekt zeigt mein Interesse an praxisnahen KI-Systemen, Workflow-Automatisierung und Werkzeugen, die manuelle Prozesse in skalierbare Software verwandeln."
     },
+    "onboardAi": {
+      "title": "OnBoardAI",
+      "description": "Ein Hackathon-Projekt für HackUTD, das schnelle Produktentwicklung unter engem Zeitdruck zeigt. Es unterstreicht meine Fähigkeit, Anforderungen zügig zu schärfen, eine End-to-End-Erfahrung umzusetzen und Produktdenken mit technischer Umsetzung in einem wettbewerbsorientierten Umfeld zu verbinden."
+    },
+    "previewShots": "Screens ansehen",
+    "hidePreview": "Vorschau schließen",
+    "openSource": "Quellcode öffnen",
+    "caseStudy": "Case Study",
+    "close": "Schließen",
+    "showcaseView": "Projektansicht",
+    "showcaseSummary": "Dieses Panel hebt die Produktoberfläche, zentrale Interaktionen und den Gesamtcharakter des Projekts hervor, bevor jemand das Repository öffnet.",
     "fakeFootball": {
       "title": "Teamverwaltung & Match-Streaming",
       "description": "Diese App wurde mit Flutter entwickelt, um meine persönlichen Bedürfnisse bei der Verwaltung eines Fußballteams zu erfüllen, und ist sowohl für Mobilgeräte als auch für Desktop verfügbar. Sie bietet Funktionen wie Kaderverwaltung, individuelle Statistiken und Match-Streaming über OBS Studio, mit in Echtzeit generierten Overlays dank FFmpeg. Die App automatisiert auch die Erstellung von Highlight-Videos im Hoch- und Querformat für soziale Netzwerke. Ursprünglich für den Eigengebrauch entwickelt, verfolge ich nun das Ziel, sie als umfassendes Tool für Trainer, Spieler, Content Creator und andere Mannschaftssportarten zu kommerzialisieren."

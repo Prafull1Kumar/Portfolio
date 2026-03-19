@@ -90,6 +90,17 @@
       "title": "AI Job Outreach Agent",
       "description": "An automation-focused project for streamlining job outreach workflows with AI assistance. It is designed to help identify roles, tailor outreach, and reduce repetitive application work by combining LLM-driven generation with a structured automation pipeline. The project highlights my interest in practical AI systems, workflow automation, and building tools that turn manual processes into scalable software."
     },
+    "onboardAi": {
+      "title": "OnBoardAI",
+      "description": "A hackathon project built for HackUTD that explores rapid product development under tight time constraints. It highlights my ability to scope quickly, ship an end-to-end experience, and combine product thinking with engineering execution in a competitive environment."
+    },
+    "previewShots": "Preview shots",
+    "hidePreview": "Hide preview",
+    "openSource": "Open source",
+    "caseStudy": "Case study",
+    "close": "Close",
+    "showcaseView": "Project preview",
+    "showcaseSummary": "Use this panel to spotlight the product surface, key interactions, and the overall feel of the project before someone decides to open the repository.",
     "public": "public",
     "private": "private"
   },

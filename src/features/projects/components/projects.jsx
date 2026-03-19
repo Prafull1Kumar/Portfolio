@@ -1,8 +1,7 @@
-import ProjectEntry from "@/features/projects/model/projectEntry";
 import ProjectCard from "@/features/projects/components/projectCard";
 import MasonryLayout from "@/components/layout/masonryLayout";
 import {useTranslations} from "next-intl";
-import {PROJECTS_T_NODE, PORTFOLIO, SUSTAIN, IDEOLOGIES, AI_JOB_OUTREACH_AGENT} from "@/features/projects/projects.constants";
+import {PROJECTS_T_NODE, PORTFOLIO, SUSTAIN, IDEOLOGIES, AI_JOB_OUTREACH_AGENT, ONBOARD_AI} from "@/features/projects/projects.constants";
 
 const m = [
     {
@@ -29,6 +28,12 @@ const m = [
         url: 'https://github.com/Prafull1Kumar/AI-Job-Outreach-Agent',
         techList: ['Python', 'OpenAI', 'Automation', 'LLMs', 'Job Search']
     },
+    {
+        key: ONBOARD_AI,
+        imageUrl: '/appMockup_2.jpg',
+        url: 'https://github.com/devils-angel/HackUTDGoldie',
+        techList: ['Hackathon', 'Full Stack', 'AI', 'Web App']
+    },
 ]
 
 function Projects() {
@@ -52,9 +57,14 @@ function Projects() {
 }
 
 function translateProjects(t) {
-    return m.map(e =>
-        new ProjectEntry(t(`${e.key}.title`), t(`${e.key}.description`), e.imageUrl, e.url, e.techList)
-    )
+    return m.map((e) => ({
+        title: t(`${e.key}.title`),
+        description: t(`${e.key}.description`),
+        imageUrl: e.imageUrl,
+        url: e.url,
+        techList: e.techList,
+        screenshots: e.screenshots?.length ? e.screenshots : [e.imageUrl]
+    }))
 }
 
 export default Projects
