@@ -20,6 +20,7 @@ Modern, responsive personal portfolio built with Next.js (App Router), Tailwind 
 ## Getting started
 
 Prerequisites:
+
 - Node.js 18+ (LTS recommended)
 
 Install dependencies and run locally:
@@ -57,6 +58,7 @@ GMAIL_TO_EMAIL=your_destination_email@example.com
 ```
 
 Other environment notes:
+
 - `NEXT_PUBLIC_LASTMOD` is injected at build time by `next.config.mjs` (used for sitemaps/metadata freshness).
 
 ## Project structure
@@ -101,28 +103,34 @@ Public assets live in `public/` (images, icons, PDFs).
 ## Customization guide
 
 ### Branding and content
+
 - Logo and icons: `public/`
 - Intro content: `src/features/landingPage/components/landing.jsx`
 - CV button file path: `src/features/landingPage/components/cvBtn.jsx`
 
 ### Experience timeline
+
 - Data driven via i18n: `src/features/experience/experience.constants.js` keys + `messages/*.json`
 - Renderer: `src/features/experience/components/experience.jsx`
 - Item layout: `src/features/experience/components/timelineElement.jsx`
 
 To add a new entry:
-1) Add keys and messages (title, description, time) to `messages/en.json` (and other locales if used).
-2) Append the key to the `keys` array in `experience.jsx` with `isWork` and `company` when relevant.
+
+1. Add keys and messages (title, description, time) to `messages/en.json` (and other locales if used).
+2. Append the key to the `keys` array in `experience.jsx` with `isWork` and `company` when relevant.
 
 ### Projects
+
 - Edit list in `src/features/projects/components/projects.jsx` (`m` array)
 - Card UI in `src/features/projects/components/projectCard.jsx`
 
 ### Skills
+
 - Update icons/names in `src/features/skills/components/techSkills.jsx`
-	(icons are read from `/public/skills/`)
+  (icons are read from `/public/skills/`)
 
 ### Contact form
+
 - UI: `src/features/contact/components/contactForm.jsx`
 - API route: `src/app/api/contact/`
 - Email template: `mail/contactTemplate.js`
@@ -143,6 +151,7 @@ If you prefer more centralized styling, you can extract frequently used class co
 - The Next.js config wraps the app with the next-intl plugin (`next.config.mjs`).
 
 To add/remove locales, update:
+
 - `messages/<locale>.json`
 - routing helpers in `src/i18n/`
 - any UI that switches locales (e.g., language dropdown if enabled)
@@ -156,6 +165,7 @@ To add/remove locales, update:
 ## Deployment
 
 Vercel is the recommended platform:
+
 - Create a new project and link this repo
 - Set environment variables in the Vercel dashboard
 - Deploy; preview/production URLs are created automatically
@@ -171,4 +181,4 @@ Alternatively, you can self-host with `npm run build` and `npm start` behind a r
 
 ## License
 
-MIT — see `LICENSE` if present, or add one for your fork.
+MIT — see `LICENSE` if present, or add one for your fork
